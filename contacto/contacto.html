@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClínicaPorElMundo - Contacto</title>
+</head>
+<body>
+  <header>
+    <h1>ClínicaPorElMundo - Contacto</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Formulario de contacto</h2>
+    <p>Por favor rellene el siguiente formulario. Los campos marcados como "*" deben completarse para poder enviar su consulta.</p>
+
+    <form action="contacto-respuesta.html" method="get" novalidate>
+      <div class="campo campo-asunto">
+        <label for="asunto">Asunto <span class="obligatorio" aria-hidden="true">*</span></label>
+        <input type="text" id="asunto" name="asunto" required>
+      </div>
+      <div class ="campo campo-comentario">
+        <label for="comentario">Comentario o pregunta <span class="obligatorio" aria-hidden="true">*</span></label>
+        <textarea id="comentario" name="comentario" rows="5" required></textarea>
+      </div>  
+      
+      <div class=" campo campo-datosPersona">
+        <label for="soy">Soy</label>
+        <select id="soy" name="soy">
+          <option value="paciente">Paciente</option>
+          <option value="cientifico">Científico</option>
+          <option value="medico">Médico</option>
+          <option value="educador">Educador</option>
+          <option value="fabricante">Fabricante</option>
+          <option value="periodista">Periodista</option>
+        </select>
+        <label for="fecha-nac">Fecha de nacimiento</label>
+        <input type="date" id="fecha-nac" name="fecha_nacimiento">
+    
+          <fieldset>
+        <legend>Sexo</legend>
+        <input type="radio" id="sexo-h" name="sexo" value="hombre">
+        <label for="sexo-h">Hombre</label>
+
+        <input type="radio" id="sexo-m" name="sexo" value="mujer">
+        <label for="sexo-m">Mujer</label>
+
+        <input type="radio" id="sexo-o" name="sexo" value="otro">
+        <label for="sexo-o">Otro</label>
+      </fieldset>
+      </div>  
+      
+      <div class="campo campo-emailFinalContacto">
+        <label for="emailContacto">Correo electrónico</label>
+        <input type="email"  id="emailContacto" name=email placeholder="ejemplo@dominio.com">
+      </div>
+
+    <div class="campo campo-checkboxFinal">
+      <label for="checkbox">Deseo mantenerme informado de futuras actualizaciones</label>
+      <input type="checkbox" id="checkbox" name="checkbox">
+    </div>
+    <div class="campo campo-buttonFinal">
+      <button type="submit">Enviar consulta</button>
+    </div>
+  </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Clinicaporelmundo | Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

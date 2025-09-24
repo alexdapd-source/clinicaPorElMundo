@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClínicaPorElMundo - Buscador</title>
+</head>
+<body>
+  <header>
+    <h1>ClínicaPorElMundo - Buscador</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Formulario de búsqueda</h2>
+    <p>Introduzca los criterios que desee. El campo * es obligatorio.</p>
+
+    <form action="buscador-respuesta.html" method="get" novalidate> 
+      <div class= "campo campo-cuadroBuscador">
+        <label for="descripcion">Descripción <span aria-hidden="true">*</span></label>
+        <input type="search" id="descripcion" name="descripcion" maxlength="50" required>
+      </div>
+
+      <div>
+        <label for="causas">Causas</label>
+        <input type="text" id="causas" name="causas" maxlength="50">
+      </div>
+
+      <div class="campo campo-selectoresBuscador">
+        <label for="sintomas">Síntomas (Ctrl o Shift para seleccionar varios)</label>
+        <select id="sintomas" name="sintomas[]" multiple size="5">
+          <option value="fiebre">Fiebre</option>
+          <option value="vomito">Vómito</option>
+          <option value="diarrea">Diarrea</option>
+          <option value="dolor-muscular">Dolor muscular</option>
+          <option value="tos">Tos</option>
+        </select>
+
+        <label for="pruebas">Pruebas y exámenes (selección múltiple)</label>
+        <select id="pruebas" name="pruebas[]" multiple size="5">
+          <option value="analisis-sangre">Análisis de sangre</option>
+          <option value="ecografia">Ecografía</option>
+          <option value="radiografia">Radiografía</option>
+          <option value="tomografia">Tomografía</option>
+          <option value="ultrasonido">Ultrasonido</option>
+        </select>
+      </div>
+      
+      <div class = "campo campo-tratamientoBuscador">
+        <label for="tratamiento">Tratamiento</label>
+        <input type="text" id="tratamiento" name="tratamiento" maxlength="50" >
+      </div>
+
+      <fieldset class = "campo campo-expectativasBuscador">
+        <legend>Expectativas</legend>
+        <input type="radio" id="exp-neg" name="expectativas" value="negativas">
+        <label for="exp-neg">Negativas</label>
+
+        <input type="radio" id="exp-undef" name="expectativas" value="sin-definir">
+        <label for="exp-undef">Sin definir</label>
+
+        <input type="radio" id="exp-pos" name="expectativas" value="positivas">
+        <label for="exp-pos">Positivas</label>
+      </fieldset>
+
+      <button type="submit">Buscar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Clinicaporelmundo | Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+
