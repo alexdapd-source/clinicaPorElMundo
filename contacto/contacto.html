@@ -19,7 +19,7 @@
     <h2>Formulario de contacto</h2>
     <p>Por favor rellene el siguiente formulario. Los campos marcados como "*" deben completarse para poder enviar su consulta.</p>
 
-    <form action="contacto-respuesta.html" method="get">
+    <form action="contacto-respuesta.html" method="post">
       <div class="campo campo-asunto">
         <label for="asunto">Asunto <span class="obligatorio" aria-hidden="true">*</span></label>
         <input type="text" id="asunto" name="asunto" required>
@@ -57,7 +57,7 @@
       
       <div class="campo campo-emailFinalContacto">
         <label for="emailContacto">Correo electrónico</label>
-        <input type="email"  id="emailContacto" name=email placeholder="ejemplo@dominio.com">
+        <input type="email"  id="emailContacto" name="email" placeholder="ejemplo@dominio.com">
       </div>
 
     <div class="campo campo-checkboxFinal">
