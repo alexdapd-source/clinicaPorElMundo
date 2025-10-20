@@ -6,11 +6,12 @@
         <title>ClinicaPorElMundo::tablaSeguros</title>
     </head>
     <body>
+        <a href="#general_main" class="skip-link">Saltar al contenido</a>   
         <header>
-         <a href="../index.html"><img src="../extra/logoClinica.jpg" alt="Logo de Clínica Por El Mundo" height="75" width="75"></a>
-         <h1>ClinicaPorElMundo</h1>
+            <a href="../index.html"><img src="../extra/logoClinica.jpg" alt="Logo de Clínica Por El Mundo" height="75" width="75"></a>
+            <h1>ClinicaPorElMundo</h1>
         
-         <nav class="navegadorPrincipal">
+        <nav class="navegadorPrincipal">
             <ul>
                 <li><a href="Enfdeldia/Enfermedaddeldia.html">Enfermedad del día</a></li>
                 <li><a href="enfermedadesusuales/enfermedadesusuales.html">Enfermedades más usuales</a></li>
@@ -19,131 +20,135 @@
                 <li><a href="tablaSeguros.html">Comparación precio seguros</a></li>
             </ul>
         </nav>
-       </header>
-       <div class="ruta_de_migas">
-           <a href="../index.html">Inicio</a> > 
-           <span>Comparación de Seguros</span>
-       </div>
+        </header>
+        <div class="ruta_de_migas">
+            <a href="../index.html">Inicio</a> > 
+            <span>Comparación de Seguros</span>
+        </div>
 
-        <main>
+        <main id="general_main">
             <table border="1">
-            <caption>Comparación de Seguros Médicos (Precios en EUR)</caption>
-            <tr>
-                <th scope="col">País</th>
-                <th scope="col">Nombre del Seguro</th>
-                <th scope="col">Especificaciones</th>
-                <th scope="col">Precio anual (€)</th>
-            </tr>
-            <tr>
-                <td rowspan="5">España</td>
-                <td>Sanitas Básico</td>
-                <td>Cobertura ambulatoria, especialistas, sin hospitalización</td>
-                <td>420</td>
-            </tr>
-            <tr>
-                <td>Adeslas Plena</td>
-                <td>Cobertura completa, hospitalización, especialistas</td>
-                <td>650</td>
-            </tr>
-            <tr>
-                <td>Asisa Salud</td>
-                <td>Cobertura ambulatoria y hospitalaria, dental opcional</td>
-                <td>590</td>
-            </tr>
-            <tr>
-                <td>DKV Integral</td>
-                <td>Cobertura completa, hospitalización, especialistas, dental</td>
-                <td>720</td>
-            </tr>
-            <tr>
-                <td>Mapfre Salud Familiar</td>
-                <td>Cobertura completa, hospitalización, especialistas</td>
-                <td>680</td>
-            </tr>
-            <tr>
-                <td rowspan="4">México</td>
-                <td>GNP Salud Total</td>
-                <td>Cobertura nacional, hospitalización, maternidad</td>
-                <td>950</td>
-            </tr>
-            <tr>
-                <td>AXA Médica</td>
-                <td>Especialistas, hospitalización, urgencias</td>
-                <td>820</td>
-            </tr>
-            <tr>
-                <td>MetLife Salud</td>
-                <td>Cobertura nacional, hospitalización, maternidad</td>
-                <td>870</td>
-            </tr>
-            <tr>
-                <td>Seguros Monterrey</td>
-                <td>Especialistas, hospitalización, urgencias</td>
-                <td>790</td>
-            </tr>
-            <tr>
-                <td rowspan="3">Argentina</td>
-                <td>Swiss Medical</td>
-                <td>Cobertura nacional, especialistas, hospitalización</td>
-                <td>210</td>
-            </tr>
-            <tr>
-                <td>OSDE 210</td>
-                <td>Especialistas, hospitalización, odontología</td>
-                <td>170</td>
-            </tr>
-            <tr>
-                <td>Galeno Oro</td>
-                <td>Cobertura completa, hospitalización, especialistas</td>
-                <td>190</td>
-            </tr>
-            <tr>
-                <td rowspan="2">Estados Unidos</td>
-                <td>Blue Cross Bronze</td>
-                <td>Cobertura básica, deducible alto, hospitalización</td>
-                <td>3,000</td>
-            </tr>
-            <tr>
-                <td>Kaiser Permanente Silver</td>
-                <td>Cobertura completa, hospitalización, especialistas</td>
-                <td>3,400</td>
-            </tr>
-            <tr>
-                <td rowspan="2">Alemania</td>
-                <td>TK (Techniker Krankenkasse)</td>
-                <td>Cobertura completa, hospitalización, especialistas</td>
-                <td>900</td>
-            </tr>
-            <tr>
-                <td>DAK Gesundheit</td>
-                <td>Cobertura completa, hospitalización, especialistas</td>
-                <td>920</td>
-            </tr>
-            <tr>
-                <td rowspan="2">Francia</td>
-                <td>Mutuelle Générale</td>
-                <td>Cobertura completa, hospitalización, especialistas</td>
-                <td>850</td>
-            </tr>
-            <tr>
-                <td>Harmonie Mutuelle</td>
-                <td>Cobertura completa, hospitalización, especialistas</td>
-                <td>870</td>
-            </tr>
-            <tr>
-                <td>Italia</td>
-                <td>Unisalute</td>
-                <td>Cobertura completa, hospitalización, especialistas</td>
-                <td>800</td>
-            </tr>
-            <tr>
-                <td>Reino Unido</td>
-                <td>Bupa Health</td>
-                <td>Cobertura completa, hospitalización, especialistas</td>
-                <td>1,100</td>
-            </tr>
-        </table>
-        </main> 
+                <caption>Comparación de Seguros Médicos (Precios en EUR)</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">País</th>
+                        <th scope="col">Nombre del Seguro</th>
+                        <th scope="col">Especificaciones</th>
+                        <th scope="col">Precio anual (€)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="5">España</td>
+                        <td>Sanitas Básico</td>
+                        <td>Cobertura ambulatoria, especialistas, sin hospitalización</td>
+                        <td>420</td>
+                    </tr>
+                    <tr>
+                        <td>Adeslas Plena</td>
+                        <td>Cobertura completa, hospitalización, especialistas</td>
+                        <td>650</td>
+                    </tr>
+                    <tr>
+                        <td>Asisa Salud</td>
+                        <td>Cobertura ambulatoria y hospitalaria, dental opcional</td>
+                        <td>590</td>
+                    </tr>
+                    <tr>
+                        <td>DKV Integral</td>
+                        <td>Cobertura completa, hospitalización, especialistas, dental</td>
+                        <td>720</td>
+                    </tr>
+                    <tr>
+                        <td>Mapfre Salud Familiar</td>
+                        <td>Cobertura completa, hospitalización, especialistas</td>
+                        <td>680</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">México</td>
+                        <td>GNP Salud Total</td>
+                        <td>Cobertura nacional, hospitalización, maternidad</td>
+                        <td>950</td>
+                    </tr>
+                    <tr>
+                        <td>AXA Médica</td>
+                        <td>Especialistas, hospitalización, urgencias</td>
+                        <td>820</td>
+                    </tr>
+                    <tr>
+                        <td>MetLife Salud</td>
+                        <td>Cobertura nacional, hospitalización, maternidad</td>
+                        <td>870</td>
+                    </tr>
+                    <tr>
+                        <td>Seguros Monterrey</td>
+                        <td>Especialistas, hospitalización, urgencias</td>
+                        <td>790</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Argentina</td>
+                        <td>Swiss Medical</td>
+                        <td>Cobertura nacional, especialistas, hospitalización</td>
+                        <td>210</td>
+                    </tr>
+                    <tr>
+                        <td>OSDE 210</td>
+                        <td>Especialistas, hospitalización, odontología</td>
+                        <td>170</td>
+                    </tr>
+                    <tr>
+                        <td>Galeno Oro</td>
+                        <td>Cobertura completa, hospitalización, especialistas</td>
+                        <td>190</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Estados Unidos</td>
+                        <td>Blue Cross Bronze</td>
+                        <td>Cobertura básica, deducible alto, hospitalización</td>
+                        <td>3,000</td>
+                    </tr>
+                    <tr>
+                        <td>Kaiser Permanente Silver</td>
+                        <td>Cobertura completa, hospitalización, especialistas</td>
+                        <td>3,400</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Alemania</td>
+                        <td>TK (Techniker Krankenkasse)</td>
+                        <td>Cobertura completa, hospitalización, especialistas</td>
+                        <td>900</td>
+                    </tr>
+                    <tr>
+                        <td>DAK Gesundheit</td>
+                        <td>Cobertura completa, hospitalización, especialistas</td>
+                        <td>920</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Francia</td>
+                        <td>Mutuelle Générale</td>
+                        <td>Cobertura completa, hospitalización, especialistas</td>
+                        <td>850</td>
+                    </tr>
+                    <tr>
+                        <td>Harmonie Mutuelle</td>
+                        <td>Cobertura completa, hospitalización, especialistas</td>
+                        <td>870</td>
+                    </tr>
+                    <tr>
+                        <td>Italia</td>
+                        <td>Unisalute</td>
+                        <td>Cobertura completa, hospitalización, especialistas</td>
+                        <td>800</td>
+                    </tr>
+                    <tr>
+                        <td>Reino Unido</td>
+                        <td>Bupa Health</td>
+                        <td>Cobertura completa, hospitalización, especialistas</td>
+                        <td>1,100</td>
+                    </tr>
+                </tbody>
+            </table>
+         </main> 
         <footer>
             <p> ClinicaPorElMundo - Autores: Alex Daniel Apolo Dávila, Francisco José Juan Tortosa </p>
         </footer>
