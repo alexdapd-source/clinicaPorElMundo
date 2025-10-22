@@ -1,0 +1,224 @@
+/* ==========================================
+   RESPONSIVE.CSS - ClinicaPorElMundo
+   Diseño adaptativo para diferentes pantallas
+   ========================================== */
+
+/* ============================================
+   MÓVIL PEQUEÑO (hasta 480px)
+   ============================================ */
+@media (max-width: 480px) {
+  /* Contenedor más estrecho en móvil */
+  .contenedor {
+    padding: 0 var(--espacio-s);
+  }
+  
+  /* Títulos más pequeños */
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  /* Navegación en columna */
+  nav ul {
+    flex-direction: column;
+  }
+  
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Formularios a ancho completo */
+  form {
+    padding: var(--espacio-m);
+  }
+  
+  /* Tablas con scroll horizontal */
+  .tabla-responsive {
+    overflow-x: auto;
+    display: block;
+  }
+  
+  /* Grid de noticias en 1 columna */
+  #noticias {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Alfabeto más compacto */
+  .alfabeto-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+  .alfabeto-grid a {
+    font-size: var(--texto-m);
+    padding: var(--espacio-s);
+  }
+}
+
+/* ============================================
+   TABLET (481px - 767px)
+   ============================================ */
+@media (min-width: 481px) and (max-width: 767px) {
+  .contenedor {
+    padding: 0 var(--espacio-m);
+  }
+  
+  /* Navegación en 2 columnas */
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Formularios siguen verticales */
+  form {
+    max-width: 500px;
+  }
+  
+  /* Alfabeto en 8 columnas */
+  .alfabeto-grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+/* ============================================
+   TABLET GRANDE (768px - 1023px)
+   ============================================ */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contenedor {
+    padding: 0 var(--espacio-m);
+  }
+  
+  /* Navegación horizontal */
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  /* Grid de noticias en 2 columnas */
+  #noticias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Formularios pueden usar layout inline */
+  .campo-inline {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: var(--espacio-m);
+  }
+  
+  /* Alfabeto completo */
+  .alfabeto-grid {
+    grid-template-columns: repeat(13, 1fr);
+  }
+}
+
+/* ============================================
+   DESKTOP (1024px - 1919px)
+   ============================================ */
+@media (min-width: 1024px) {
+  .contenedor {
+    padding: 0 var(--espacio-l);
+    max-width: 1200px;
+  }
+  
+  /* Navegación con espacio */
+  nav ul {
+    justify-content: flex-start;
+    gap: var(--espacio-m);
+  }
+  
+  /* Grid de noticias en 3 columnas */
+  #noticias {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Formularios con labels a la derecha */
+  .campo-inline label {
+    text-align: right;
+  }
+  
+  /* Alfabeto completo y espaciado */
+  .alfabeto-grid {
+    grid-template-columns: repeat(13, 1fr);
+    gap: var(--espacio-m);
+  }
+}
+
+/* ============================================
+   PANTALLAS GRANDES (1920px+)
+   ============================================ */
+@media (min-width: 1920px) {
+  .contenedor {
+    max-width: 1400px;
+    padding: 0 var(--espacio-xl);
+  }
+  
+  /* Títulos más grandes */
+  h1 {
+    font-size: 36px;
+  }
+  
+  h2 {
+    font-size: 28px;
+  }
+  
+  /* Grid de noticias en 4 columnas */
+  #noticias {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Más espacio en formularios */
+  .campo-inline {
+    grid-template-columns: 250px 1fr;
+  }
+}
+
+/* ============================================
+   IMPRESIÓN
+   ============================================ */
+@media print {
+  /* Ocultar navegación y elementos interactivos */
+  nav,
+  .skip-link,
+  button,
+  form {
+    display: none;
+  }
+  
+  /* Fondo blanco para imprimir */
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Enlaces en negro */
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  /* Evitar saltos de página dentro de elementos */
+  article,
+  section {
+    page-break-inside: avoid;
+  }
+}
+
+/* ============================================
+   ORIENTACIÓN
+   WCAG 1.3.4 Orientation (AA)
+   ============================================ */
+/* El diseño funciona tanto en vertical como horizontal */
+@media (orientation: landscape) {
+  /* Ajustes menores si hace falta */
+  .alfabeto-grid {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  }
+}
+
+@media (orientation: portrait) {
+  /* El diseño por defecto ya funciona bien */
+}

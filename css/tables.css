@@ -1,0 +1,149 @@
+/* ==========================================
+   TABLES.CSS - ClinicaPorElMundo
+   Tablas + Accesibilidad
+   ========================================== */
+
+/* ============ TABLA BASE ============ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--espacio-l) 0;
+  background-color: var(--fondo-blanco);
+  box-shadow: var(--sombra);
+  border-radius: var(--borde-redondo);
+  overflow: hidden;
+}
+
+/* ============ CAPTION (TÍTULO DE LA TABLA) ============ */
+caption {
+  font-size: var(--texto-l);
+  font-weight: bold;
+  color: var(--color-primario);
+  text-align: left;
+  padding: var(--espacio-m);
+  background-color: var(--fondo-gris);
+}
+
+/* ============ THEAD (CABECERA) ============ */
+thead {
+  background-color: var(--color-primario);
+  color: var(--texto-blanco);
+}
+
+thead th {
+  padding: var(--espacio-m);
+  text-align: left;
+  font-weight: bold;
+  font-size: var(--texto-m);
+  border-bottom: 3px solid var(--color-secundario);
+}
+
+/* ============ TBODY (CUERPO) ============ */
+tbody td {
+  padding: var(--espacio-s) var(--espacio-m);
+  border-bottom: 1px solid var(--borde-color);
+}
+
+tbody th {
+  padding: var(--espacio-s) var(--espacio-m);
+  text-align: left;
+  font-weight: bold;
+  background-color: var(--fondo-gris);
+}
+
+/* ============ ESTILO CEBRA (FILAS ALTERNADAS) ============ */
+tbody tr:nth-child(odd) {
+  background-color: var(--fondo-blanco);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--fondo-gris);
+}
+
+/* ACCESIBILIDAD: Hover en filas para mejor legibilidad */
+tbody tr:hover {
+  background-color: rgba(37, 99, 235, 0.1);
+  cursor: pointer;
+}
+
+/* ACCESIBILIDAD: Focus en celdas */
+tbody td:focus,
+tbody th:focus {
+  outline: 3px solid var(--color-acento);
+  outline-offset: -3px;
+}
+
+/* ============ TFOOT (PIE DE TABLA) ============ */
+tfoot {
+  background-color: var(--fondo-gris);
+  font-weight: bold;
+}
+
+tfoot th,
+tfoot td {
+  padding: var(--espacio-m);
+  border-top: 2px solid var(--color-primario);
+}
+
+/* ============ RESPONSIVE: SCROLL EN MÓVIL ============ */
+.tabla-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: var(--espacio-m) 0;
+}
+
+/* En móvil, mostrar indicador de scroll */
+@media (max-width: 767px) {
+  .tabla-responsive::after {
+    content: "← Desliza para ver más →";
+    display: block;
+    text-align: center;
+    color: var(--texto-claro);
+    font-size: var(--texto-s);
+    margin-top: var(--espacio-s);
+    font-style: italic;
+  }
+  
+  /* Hacer la tabla más compacta en móvil */
+  table {
+    font-size: var(--texto-s);
+  }
+  
+  th, td {
+    padding: var(--espacio-s);
+  }
+}
+
+/* ============ BORDES VISIBLES (OPCIONAL) ============ */
+table.con-bordes,
+table.con-bordes th,
+table.con-bordes td {
+  border: 1px solid var(--borde-color);
+}
+
+/* ============ ALINEACIÓN DE TEXTO ============ */
+.texto-derecha {
+  text-align: right;
+}
+
+.texto-centro {
+  text-align: center;
+}
+
+/* ============ CELDAS DESTACADAS ============ */
+.celda-destacada {
+  background-color: rgba(245, 158, 11, 0.2);
+  font-weight: bold;
+}
+
+.celda-error {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: var(--color-error);
+  font-weight: bold;
+}
+
+.celda-exito {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: var(--color-exito);
+  font-weight: bold;
+}

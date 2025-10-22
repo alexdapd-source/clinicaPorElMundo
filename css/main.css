@@ -1,0 +1,17 @@
+/* 1. BASE: Variables y estilos básicos */
+@import url('base.css');
+
+/* 2. LAYOUT: Estructura de la página */
+@import url('layout.css');
+
+/* 3. FORMS: Estilos de formularios */
+@import url('forms.css');
+
+/* 4. TABLES: Estilos de tablas */
+@import url('tables.css');
+
+/* 5. RESPONSIVE: Diseño adaptativo */
+@import url('responsive.css');
+
+/* 6. ACCESSIBILITY: Accesibilidad */
+@import url('accessibility.css');
