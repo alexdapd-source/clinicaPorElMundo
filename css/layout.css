@@ -12,69 +12,6 @@ header, main, footer {
   padding: 0 var(--espacio-m);
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--fondo-gris);
-  gap: var(--espacio-m);
-}
-
-/* PRIMERA FILA: Logo | Título | Nav1 */
-#cambio {
-  display: grid;
-  grid-template-columns: auto 1fr auto; /* Logo | Título | Nav1 */
-  align-items: center;
-  gap: var(--espacio-m);
-  width: 100%;
-  border: 3px solid black;
-  padding: var(--espacio-s);
-}
-
-/* Columna 1: Logo a la izquierda */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: var(--espacio-s);
-  border: 3px solid blue; /* Para verlo mejor */
-  justify-self: start; /* Fuerza a la izquierda */
-}
-
-/* Columna 2: Título CENTRADO */
-.logo h1 {
-  margin: 0;
-  text-align: center;
-  border: 3px solid green; /* Para verlo mejor */
-}
-
-/* Columna 3: Nav1 a la derecha */
-#navegadorIndex {
-  justify-self: end; /* Fuerza a la derecha */
-  border: 3px solid red; /* Para verlo mejor */
-}
-
-#navegadorIndex ul {
-  display: flex;
-  gap: var(--espacio-m);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* RESTO DE FILAS (sin cambios) */
-.navegadorPrincipal ul {
-  display: flex;
-  gap: var(--espacio-m);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border: 3px solid purple;
-}
-
-#cita_index {
-  margin-top: var(--espacio-s);
-  border: 3px solid orange;
-  padding: var(--espacio-m);
-}
 
 /* ============ NAVEGACIÓN ============ */
 nav {
@@ -148,6 +85,65 @@ article {
 article h3 {
   color: var(--color-primario);
   margin-bottom: var(--espacio-s);
+}
+
+/*=================MODIFICACION DEL HEADER PARA CORRELACION INDEX=====================*/
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--fondo-gris);
+  gap: var(--espacio-m);
+}
+
+/* PRIMERA FILA: Logo | Título | Nav1 */
+#cambio {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Logo y Título | Nav1 */
+  align-items: center;
+  gap: var(--espacio-m);
+  width: 100%;
+}
+
+/* Columna 1: Logo a la izquierda */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-s);
+  justify-self: start; /* Fuerza a la izquierda */
+}
+
+/* Columna 2: Título CENTRADO */
+.logo h1 {
+  margin: 0;
+  text-align: center;
+}
+
+/* Columna 3: Nav1 a la derecha */
+#navegadorIndex {
+  justify-self: end; /* Fuerza a la derecha */
+}
+
+#navegadorIndex ul {
+  display: flex;
+  gap: var(--espacio-m);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* RESTO DE FILAS (sin cambios) */
+.navegadorPrincipal ul {
+  display: flex;
+  gap: var(--espacio-m);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#cita_index {
+  margin-top: var(--espacio-s);
+  border: 3px solid orange;
+  padding: var(--espacio-m);
 }
 
 /* ============ GRID DE NOTICIAS ============ */
