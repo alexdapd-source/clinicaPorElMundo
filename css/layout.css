@@ -1,23 +1,79 @@
 /* ==========================================
-   LAYOUT.CSS - ClinicaPorElMundo
-   Estructura: header, nav, main, footer
+    LAYOUT.CSS - ClinicaPorElMundo
+    Estructura: header, nav, main, footer
    ========================================== */
 
 /* ============ HEADER ============ */
+/* ORGANIZACIÓN DEL HEADER EN 4 FILAS */
+header, main, footer {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--espacio-m);
+}
+
 header {
+  display: flex;
+  flex-direction: column;
   background-color: var(--fondo-gris);
-  padding: var(--espacio-m) 0;
-  border-bottom: 2px solid var(--borde-color);
+  gap: var(--espacio-m);
 }
 
-header h1 {
-  margin-bottom: var(--espacio-s);
+/* PRIMERA FILA: Logo | Título | Nav1 */
+#cambio {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Logo | Título | Nav1 */
+  align-items: center;
+  gap: var(--espacio-m);
+  width: 100%;
+  border: 3px solid black;
+  padding: var(--espacio-s);
 }
 
-header img {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: var(--espacio-s);
+/* Columna 1: Logo a la izquierda */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-s);
+  border: 3px solid blue; /* Para verlo mejor */
+  justify-self: start; /* Fuerza a la izquierda */
+}
+
+/* Columna 2: Título CENTRADO */
+.logo h1 {
+  margin: 0;
+  text-align: center;
+  border: 3px solid green; /* Para verlo mejor */
+}
+
+/* Columna 3: Nav1 a la derecha */
+#navegadorIndex {
+  justify-self: end; /* Fuerza a la derecha */
+  border: 3px solid red; /* Para verlo mejor */
+}
+
+#navegadorIndex ul {
+  display: flex;
+  gap: var(--espacio-m);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* RESTO DE FILAS (sin cambios) */
+.navegadorPrincipal ul {
+  display: flex;
+  gap: var(--espacio-m);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 3px solid purple;
+}
+
+#cita_index {
+  margin-top: var(--espacio-s);
+  border: 3px solid orange;
+  padding: var(--espacio-m);
 }
 
 /* ============ NAVEGACIÓN ============ */

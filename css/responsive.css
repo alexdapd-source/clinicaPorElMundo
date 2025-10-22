@@ -1,224 +1,223 @@
 /* ==========================================
    RESPONSIVE.CSS - ClinicaPorElMundo
-   Diseño adaptativo para diferentes pantallas
+   Diseño adaptativo (Mobile First)
    ========================================== */
 
-/* ============================================
-   MÓVIL PEQUEÑO (hasta 480px)
-   ============================================ */
+/* ============ MÓVIL (hasta 480px) ============ */
+/* Los estilos base ya están pensados para móvil */
+
 @media (max-width: 480px) {
-  /* Contenedor más estrecho en móvil */
-  .contenedor {
-    padding: 0 var(--espacio-s);
+  /* Reducir tamaños en pantallas muy pequeñas */
+  :root {
+    --texto-xl: 24px;
+    --texto-l: 18px;
+    --espacio-xl: 24px;
   }
   
-  /* Títulos más pequeños */
-  h1 {
-    font-size: 24px;
-  }
-  
-  h2 {
-    font-size: 20px;
+  /* Header más compacto */
+  header h1 {
+    font-size: var(--texto-l);
   }
   
   /* Navegación en columna */
   nav ul {
     flex-direction: column;
+    gap: var(--espacio-s);
   }
   
   nav a {
     width: 100%;
-    text-align: center;
-  }
-  
-  /* Formularios a ancho completo */
-  form {
-    padding: var(--espacio-m);
-  }
-  
-  /* Tablas con scroll horizontal */
-  .tabla-responsive {
-    overflow-x: auto;
-    display: block;
-  }
-  
-  /* Grid de noticias en 1 columna */
-  #noticias {
-    grid-template-columns: 1fr;
   }
   
   /* Alfabeto más compacto */
   .alfabeto-grid {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 4px;
   }
   
   .alfabeto-grid a {
+    padding: 4px;
     font-size: var(--texto-m);
-    padding: var(--espacio-s);
+  }
+  
+  /* Formularios ocupan todo el ancho */
+  form {
+    padding: var(--espacio-m);
+  }
+  
+  /* Botones más grandes para dedos */
+  button,
+  .boton,
+  nav a {
+    min-height: 48px;
+    font-size: var(--texto-m);
   }
 }
 
-/* ============================================
-   TABLET (481px - 767px)
-   ============================================ */
+/* ============ TABLET (481px - 767px) ============ */
 @media (min-width: 481px) and (max-width: 767px) {
-  .contenedor {
-    padding: 0 var(--espacio-m);
-  }
-  
-  /* Navegación en 2 columnas */
-  nav ul {
-    display: grid;
+  /* Noticias en 2 columnas */
+  #noticias {
     grid-template-columns: repeat(2, 1fr);
   }
   
-  /* Formularios siguen verticales */
-  form {
-    max-width: 500px;
-  }
-  
-  /* Alfabeto en 8 columnas */
-  .alfabeto-grid {
-    grid-template-columns: repeat(8, 1fr);
+  /* Navegación en 2 filas */
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--espacio-s);
   }
 }
 
-/* ============================================
-   TABLET GRANDE (768px - 1023px)
-   ============================================ */
-@media (min-width: 768px) and (max-width: 1023px) {
+/* ============ TABLET GRANDE / DESKTOP (768px+) ============ */
+@media (min-width: 768px) and (max-width:1024p) {
+  /* Contenedor más ancho */
   .contenedor {
-    padding: 0 var(--espacio-m);
+    padding: 0 var(--espacio-l);
+  }
+  
+  /* Header con logo y título en línea */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
   
   /* Navegación horizontal */
   nav ul {
+    display: flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--espacio-s);
   }
   
-  /* Grid de noticias en 2 columnas */
+  /* Noticias en 2 columnas */
   #noticias {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--espacio-l);
   }
   
-  /* Formularios pueden usar layout inline */
+  /* Alfabeto más espaciado */
+  .alfabeto-grid {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: var(--espacio-s);
+  }
+  
+  /* Formularios con mejor alineación */
   .campo-inline {
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 200px 1fr;
+    align-items: start;
     gap: var(--espacio-m);
   }
   
-  /* Alfabeto completo */
-  .alfabeto-grid {
-    grid-template-columns: repeat(13, 1fr);
-  }
-}
-
-/* ============================================
-   DESKTOP (1024px - 1919px)
-   ============================================ */
-@media (min-width: 1024px) {
-  .contenedor {
-    padding: 0 var(--espacio-l);
-    max-width: 1200px;
-  }
-  
-  /* Navegación con espacio */
-  nav ul {
-    justify-content: flex-start;
-    gap: var(--espacio-m);
-  }
-  
-  /* Grid de noticias en 3 columnas */
-  #noticias {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  /* Formularios con labels a la derecha */
   .campo-inline label {
     text-align: right;
-  }
-  
-  /* Alfabeto completo y espaciado */
-  .alfabeto-grid {
-    grid-template-columns: repeat(13, 1fr);
-    gap: var(--espacio-m);
+    padding-top: var(--espacio-s);
   }
 }
 
-/* ============================================
-   PANTALLAS GRANDES (1920px+)
-   ============================================ */
+
+/* ============ PANTALLAS MUY GRANDES (1920px+) ============ */
 @media (min-width: 1920px) {
+  /* Limitar ancho máximo del contenido */
   .contenedor {
-    max-width: 1400px;
-    padding: 0 var(--espacio-xl);
+    max-width: 1600px;
   }
   
-  /* Títulos más grandes */
-  h1 {
-    font-size: 36px;
-  }
-  
-  h2 {
-    font-size: 28px;
-  }
-  
-  /* Grid de noticias en 4 columnas */
+  /* Noticias en 4 columnas */
   #noticias {
     grid-template-columns: repeat(4, 1fr);
   }
   
-  /* Más espacio en formularios */
-  .campo-inline {
-    grid-template-columns: 250px 1fr;
+  /* Aumentar espaciados */
+  :root {
+    --espacio-xl: 48px;
   }
 }
 
-/* ============================================
-   IMPRESIÓN
-   ============================================ */
+/* ============ MODO IMPRESIÓN ============ */
 @media print {
-  /* Ocultar navegación y elementos interactivos */
+  /* Ocultar navegación y elementos innecesarios */
   nav,
   .skip-link,
   button,
-  form {
+  .boton {
     display: none;
   }
   
-  /* Fondo blanco para imprimir */
+  /* Resetear colores para impresión */
   body {
-    background-color: white;
+    background: white;
     color: black;
   }
   
-  /* Enlaces en negro */
-  a {
-    color: black;
-    text-decoration: underline;
-  }
-  
-  /* Evitar saltos de página dentro de elementos */
-  article,
-  section {
+  /* Evitar saltos de página dentro de artículos */
+  article {
     page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+  
+  /* Mostrar URLs de enlaces */
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
   }
 }
 
-/* ============================================
-   ORIENTACIÓN
-   WCAG 1.3.4 Orientation (AA)
-   ============================================ */
-/* El diseño funciona tanto en vertical como horizontal */
+/* ============ ORIENTACIÓN ============ */
+/* WCAG 1.3.4 - El contenido debe verse bien en cualquier orientación */
 @media (orientation: landscape) {
-  /* Ajustes menores si hace falta */
+  /* Aprovechar mejor el espacio horizontal */
   .alfabeto-grid {
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
   }
 }
 
 @media (orientation: portrait) {
-  /* El diseño por defecto ya funciona bien */
+  /* Optimizar para vertical */
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+/* ============ PREFERENCIAS DE MOVIMIENTO ============ */
+/* Respetar preferencia de usuario para animaciones reducidas */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  
+  /* Mantener hover sin transición */
+  button:hover,
+  a:hover {
+    transform: none;
+  }
+}
+
+/* ============ MODO OSCURO (OPCIONAL) ============ */
+/* Respetar preferencia del sistema */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --texto-oscuro: #f3f4f6;
+    --texto-claro: #9ca3af;
+    --fondo-blanco: #1f2937;
+    --fondo-gris: #111827;
+    --fondo-oscuro: #000000;
+    --borde-color: #374151;
+  }
+  
+  body {
+    background-color: var(--fondo-gris);
+  }
+  
+  /* Ajustar contraste de imágenes */
+  img {
+    opacity: 0.9;
+  }
 }

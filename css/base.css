@@ -1,6 +1,6 @@
 /* ==========================================
-   BASE.CSS - ClinicaPorElMundo
-   Variables + Estilos básicos
+  BASE.CSS - ClinicaPorElMundo
+  Variables + Estilos básicos
    ========================================== */
 
 /* ============ VARIABLES ============ */
@@ -11,8 +11,8 @@
     --color-acento: #f59e0b;        /* Naranja */
     
     /* Colores de texto */
-    --texto-oscuro: #1f2937;
-    --texto-claro: #6b7280;
+    --texto-principal: #111111;
+    --texto-secundario: #7A7A7A;
     --texto-blanco: #ffffff;
     
     /* Fondos */
@@ -42,7 +42,12 @@
   --borde-redondo: 8px;
   --borde-color: #d1d5db;
   --sombra: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --ancho-maximo: 1200px;
+
+  /* Anchos máximos para cada breakpoint */
+  --ancho-mobile: 95%;
+  --ancho-tablet: 90%;
+  --ancho-desktop: 80%;
+  --ancho-large: 70%;
 }
 
 /* ============ RESET BÁSICO ============ */
@@ -71,20 +76,20 @@ h1 {
   font-family: var(--fuente-titulos);
   font-size: var(--texto-xl);
   margin-bottom: var(--espacio-m);
-  color: var(--color-primario);
+  color: var(--texto-principal);
 }
 
 h2 {
   font-family: var(--fuente-titulos);
   font-size: var(--texto-l);
   margin-bottom: var(--espacio-m);
-  color: var(--texto-oscuro);
+  color: var(--texto-secundario);
 }
 
 h3 {
   font-size: var(--texto-l);
   margin-bottom: var(--espacio-s);
-  color: var(--texto-oscuro);
+  color: var(--texto-secundario);
 }
 
 /* ============ PÁRRAFOS Y TEXTO ============ */
@@ -95,10 +100,10 @@ p {
 
 strong {
   font-weight: bold;
-  color: var(--texto-oscuro);
+  color: var(--texto-secundario);
 }
 
-em {
+em {  /*unidad relativa de medida tipográfica == cambia segun el escenario*/
   font-style: italic;
 }
 
@@ -108,15 +113,15 @@ a {
   text-decoration: underline;
 }
 
-a:hover {
+a:hover {     /*recuerda cambia el fondeado*/
   color: var(--color-secundario);
 }
 
-a:visited {
+a:visited { 
   color: #7c3aed;
 }
 
-/* IMPORTANTE: Focus visible para accesibilidad */
+/* IMPORTANTE: Marcamos en movimiento con teclado el cambio de color  */
 a:focus {
   outline: 3px solid var(--color-acento);
   outline-offset: 2px;
@@ -124,26 +129,26 @@ a:focus {
 }
 
 /* ============ IMÁGENES ============ */
-img {
+img { /*delegamos las responsabilidades =="No me importa tu tamaño original, adaptate a tu contenedor"*/
   max-width: 100%;
   height: auto;
   display: block;
 }
 
 /* ============ LISTAS ============ */
-ul, ol {
+ul, ol {    
   margin-bottom: var(--espacio-m);
 }
 
 /* Listas dentro de contenido con viñetas */
 article ul,
-main ul:not(nav ul) {
-  list-style: disc;
+main ul:not(nav ul) {   /*diferenciams las que estan en nav porque anteriormente as hemos destacado semanticamete para poderlas adaptar de forma mas estetica*/
+  list-style: disc;     /* Ponemos puntitos la lista */
   padding-left: var(--espacio-l);
 }
 
 article ol,
-main ol {
+main ol {       /*No tenemos ni una ol pero por si acaso le dejamos*/
   list-style: decimal;
   padding-left: var(--espacio-l);
 }
@@ -154,15 +159,14 @@ li {
 
 /* ============ BLOCKQUOTE ============ */
 blockquote {
-  margin: var(--espacio-l) 0;
+  margin: var(--espacio-m) 0;
   padding: var(--espacio-m);
   border-left: 4px solid var(--color-primario);
-  background-color: var(--fondo-gris);
   font-style: italic;
-}
+} 
 
-/* ============ CONTENEDOR GENERAL ============ */
-.contenedor {
+/* ============ CONTENEDOR GENERAL ============ POTENCIAL ELIMINABLE*/
+.contenedor { 
   max-width: var(--ancho-maximo);
   margin: 0 auto;
   padding: 0 var(--espacio-m);
@@ -171,7 +175,7 @@ blockquote {
 /* ============ SKIP LINK (Accesibilidad) ============ */
 .skip-link {
   position: absolute;
-  top: -50px;
+  top: -50px; /*lo ocultamos*/
   left: 0;
   background: var(--color-primario);
   color: var(--texto-blanco);
@@ -214,12 +218,12 @@ button:focus,
   outline-offset: 2px;
 }
 
-/* ============ CLASES ÚTILES ============ */
+/* ============ CLASES ÚTILES ============ ------------------POSIBLE ELIMINADO*/
 .texto-centrado {
   text-align: center;
 }
 
-.texto-error {
+.texto-error {    
   color: var(--color-error);
   font-weight: bold;
 }
@@ -229,7 +233,7 @@ button:focus,
   font-weight: bold;
 }
 
-/* Ocultar solo para lectores de pantalla */
+/* Ocultar, solo para lectores de pantalla ------------POSIBLE ELIMINADO*/
 .sr-only {
   position: absolute;
   width: 1px;
