@@ -90,7 +90,7 @@ fieldset {
 legend {
   font-weight: bold;
   padding: 0 var(--espacio-s);
-  color: var(--color-primario);
+  color: var(--texto-principal);
   font-size: var(--texto-m);
 }
 
@@ -124,7 +124,7 @@ button[type="submit"],
 input[type="submit"],
 input[type="button"] {
   background-color: var(--color-primario);
-  color: var(--texto-blanco);
+  color: var(--texto-principal);
   border: none;
   padding: var(--espacio-s) var(--espacio-l);
   font-size: var(--texto-m);

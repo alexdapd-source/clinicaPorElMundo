@@ -19,7 +19,7 @@ table {
 caption {
   font-size: var(--texto-l);
   font-weight: bold;
-  color: var(--color-primario);
+  color: var(--texto-principal);
   text-align: left;
   padding: var(--espacio-m);
   background-color: var(--fondo-gris);
@@ -28,7 +28,7 @@ caption {
 /* ============ THEAD (CABECERA) ============ */
 thead {
   background-color: var(--color-primario);
-  color: var(--texto-blanco);
+  color: var(--texto-principal);
 }
 
 thead th {

@@ -65,7 +65,7 @@ article {
 }
 
 article h3 {
-  color: var(--color-primario);
+  color: var(--texto-principal);
   margin-bottom: var(--espacio-s);
 }
 
@@ -208,9 +208,9 @@ footer p {
 }
 
 footer a {
-  color: var(--color-primario);
+  color: var(--texto-principal);
 }
 
 footer a:hover {
-  color: var(--texto-blanco);
+  color: var(--texto-principal);
 }
