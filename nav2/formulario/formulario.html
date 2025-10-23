@@ -28,33 +28,33 @@
     </div>
 
   <main id="general_main">
+    <h2>📋 Formulario de Análisis de Orina</h2>
     <p>
-      Los campos marcados con * son obligatorios.  
-      
+      ⚠️ <strong>Importante:</strong> Los campos marcados con * son obligatorios.  
     </p>
 
     <form action="respuesta-formulario.html" method="get">
-      <label for="correo">Correo electrónico *:</label><br>
+      <label for="correo">📧 Correo electrónico *:</label><br>
       <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required><br><br>
 
-      <label for="fecha">Fecha de nacimiento *:</label><br>
+      <label for="fecha">📅 Fecha de nacimiento *:</label><br>
       <input type="date" id="fecha" name="fecha" required><br><br>
 
-      <label for="edad">Edad (18-99) *:</label><br>
+      <label for="edad">🎂 Edad (18-99) *:</label><br>
       <input type="number" id="edad" name="edad" min="18" max="99" step="1" placeholder="Ej: 34" required><br><br>
 
-      <label for="colororina">Color de la orina *:</label><br>
+      <label for="colororina">🎨 Color de la orina *:</label><br>
       <input type="color" id="colororina" name="colororina" required>
       <small>Selecciona el color más parecido al observado.</small><br><br>
 
-      <label for="dolor">Nivel de dolor (0 = ninguno, 10 = máximo):</label><br>
+      <label for="dolor">🩺 Nivel de dolor (0 = ninguno, 10 = máximo):</label><br>
       <input type="range" id="dolor" name="dolor" min="0" max="10" step="1"><br><br>
 
-      <label for="telefono">Teléfono de contacto (formato: 600123456) *:</label><br>
+      <label for="telefono">📞 Teléfono de contacto (formato: 600123456) *:</label><br>
       <input type="tel" id="telefono" name="telefono" pattern="[6-9][0-9]{8}" placeholder="600123456" required>
       <small>Debe empezar por 6, 7, 8 o 9 y tener 9 dígitos.</small><br><br>
 
-      <input type="submit" value="Enviar">
+      <input type="submit" value="✅ Enviar">
     </form>
   </main>
 

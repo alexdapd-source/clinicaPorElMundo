@@ -129,59 +129,73 @@ header {
   padding: var(--espacio-m);
 } 
 
-/* ============ GRID DE NOTICIAS ============ */
-#noticias {
+/* ============ LAYOUT PRINCIPAL INDEX ============ */
+#index_main {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--espacio-m);
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columnas iguales */
+  grid-template-rows: auto auto; /* 2 filas automáticas */
+  gap: var(--espacio-l);
 }
 
-/* En desktop: 2 columnas */
-@media (min-width: 768px) {
-  #noticias {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* BUSCADOR - ocupa toda la primera fila */
+#buscador {
+  grid-column: 1 / -1; /* Ocupa todas las columnas */
+  grid-row: 1;
+  margin-bottom: var(--espacio-l);
 }
-
-/* ============ VIDEOS RESPONSIVOS ============ */
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
-  overflow: hidden;
-  margin: var(--espacio-m) 0;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* ============ BUSCADOR ALFABÉTICO ============ */
 
 #buscador ul {
   justify-content: space-between;
 }
 
-
-/* ============ MAPA DEL CUERPO ============ */
-.mapa-cuerpo {
-  text-align: center;
-  margin: var(--espacio-xl) 0;
+/* NOTICIAS - ocupa columnas 1 y 2, fila 2 */
+#noticias {
+  grid-column: 1 / 3; /* Columnas 1 y 2 */
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columnas para videos */
+  grid-template-rows: auto auto; /* 2 filas para videos */
+  gap: var(--espacio-m);
 }
 
-.mapa-cuerpo img {
-  margin: 0 auto;
-  max-width: 400px;
+/* Estilos para los artículos de noticias */
+#noticias article {
+  margin: 0;
+  padding: var(--espacio-m);
+  background-color: var(--fondo-blanco);
+  border-radius: var(--borde-redondo);
+  box-shadow: var(--sombra);
+}
+
+/* Videos responsivos */
+#noticias iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: var(--borde-redondo);
+}
+
+/* ============ MAPA DEL CUERPO ============ */
+/* MAPA DEL CUERPO - ocupa columna 3, fila 2 */
+section:has(img[src*="cuerpo.jpg"]) {
+  grid-column: 3; /* Columna 3 */
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagen del cuerpo */
+section:has(img[src*="cuerpo.jpg"]) img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--borde-redondo);
+  box-shadow: var(--sombra);
 }
 
 /* ============ FOOTER ============ */
 footer {
-  background-color: var(--fondo-oscuro);
+  background-color: var(--color-primario);
   color: var(--texto-blanco);
   padding: var(--espacio-l) 0;
   text-align: center;
@@ -193,7 +207,7 @@ footer p {
 }
 
 footer a {
-  color: var(--color-acento);
+  color: var(--color-primario);
 }
 
 footer a:hover {

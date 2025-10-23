@@ -82,6 +82,7 @@ h1 {
 h2 {
   font-family: var(--fuente-titulos);
   font-size: var(--texto-l);
+  margin-top: var(--espacio-m);
   margin-bottom: var(--espacio-m);
   color: var(--texto-secundario);
 }
@@ -89,7 +90,6 @@ h2 {
 section h2 {  /*Permitimos una mejor visualizacion en el main*/
   border-bottom: 2px solid var(--color-primario);
   padding-bottom: var(--espacio-s);
-  margin-bottom: var(--espacio-m);
 }
 
 h3 {
