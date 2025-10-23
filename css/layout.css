@@ -55,23 +55,6 @@ nav a:focus {
   outline-offset: 2px;
 }
 
-/* ============ MAIN ============ */
-main {
-  padding: var(--espacio-l) 0;
-  min-height: 60vh;
-}
-
-/* Secciones dentro de main */
-section {
-  margin-bottom: var(--espacio-xl);
-}
-
-section h2 {
-  border-bottom: 2px solid var(--color-primario);
-  padding-bottom: var(--espacio-s);
-  margin-bottom: var(--espacio-m);
-}
-
 /* ============ ARTÍCULOS / TARJETAS ============ */
 article {
   background-color: var(--fondo-blanco);
@@ -92,7 +75,7 @@ header {
   display: flex;
   flex-direction: column;
   background-color: var(--fondo-gris);
-  gap: var(--espacio-m);
+  padding-top: var(--espacio-m);
 }
 
 /* PRIMERA FILA: Logo | Título | Nav1 */
@@ -100,11 +83,11 @@ header {
   display: grid;
   grid-template-columns: auto 1fr auto; /* Logo y Título | Nav1 */
   align-items: center;
-  gap: var(--espacio-m);
+
   width: 100%;
 }
 
-/* Columna 1: Logo a la izquierda */
+/* Columna 1 Y 2: Logo a la izquierda */
 .logo {
   display: flex;
   align-items: center;
@@ -112,7 +95,6 @@ header {
   justify-self: start; /* Fuerza a la izquierda */
 }
 
-/* Columna 2: Título CENTRADO */
 .logo h1 {
   margin: 0;
   text-align: center;
@@ -129,22 +111,23 @@ header {
   list-style: none;
   margin: 0;
   padding: 0;
+  
 }
 
-/* RESTO DE FILAS (sin cambios) */
 .navegadorPrincipal ul {
   display: flex;
   gap: var(--espacio-m);
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: var(--espacio-m);
+  justify-content: space-between;
+  border-top: 2px solid var(--color-primario);
 }
 
 #cita_index {
   margin-top: var(--espacio-s);
-  border: 3px solid orange;
   padding: var(--espacio-m);
-}
+} 
 
 /* ============ GRID DE NOTICIAS ============ */
 #noticias {
@@ -179,48 +162,11 @@ header {
 }
 
 /* ============ BUSCADOR ALFABÉTICO ============ */
-.alfabeto-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-  gap: var(--espacio-s);
-  list-style: none;
-  padding: 0;
+
+#buscador ul {
+  justify-content: space-between;
 }
 
-.alfabeto-grid li {
-  margin: 0;
-}
-
-.alfabeto-grid a {
-  display: block;
-  padding: var(--espacio-s);
-  text-align: center;
-  background-color: var(--color-primario);
-  color: var(--texto-blanco);
-  text-decoration: none;
-  border-radius: var(--borde-redondo);
-  font-weight: bold;
-  font-size: var(--texto-l);
-  min-width: 44px;
-  min-height: 44px;
-  line-height: 28px;
-}
-
-.alfabeto-grid a:hover {
-  background-color: var(--color-secundario);
-  transform: scale(1.05);
-}
-
-.alfabeto-grid a:focus {
-  outline: 3px solid var(--color-acento);
-  outline-offset: 2px;
-}
-
-.letra-deshabilitada {
-  background-color: var(--fondo-gris) !important;
-  color: var(--texto-claro) !important;
-  cursor: not-allowed;
-}
 
 /* ============ MAPA DEL CUERPO ============ */
 .mapa-cuerpo {

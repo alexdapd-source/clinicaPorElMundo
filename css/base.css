@@ -86,6 +86,12 @@ h2 {
   color: var(--texto-secundario);
 }
 
+section h2 {  /*Permitimos una mejor visualizacion en el main*/
+  border-bottom: 2px solid var(--color-primario);
+  padding-bottom: var(--espacio-s);
+  margin-bottom: var(--espacio-m);
+}
+
 h3 {
   font-size: var(--texto-l);
   margin-bottom: var(--espacio-s);
