@@ -3,80 +3,34 @@
    Diseño adaptativo (Mobile First)
    ========================================== */
 
-/* ============ MÓVIL (hasta 480px) ============ */
-/* Los estilos base ya están pensados para móvil */
+/* ============ MÓVIL (BASE - hasta 768px) ============ */
+/* Los estilos base ya están pensados para móvil en cada archivo CSS */
 
-@media (max-width: 480px) {
-  /* Reducir tamaños en pantallas muy pequeñas */
-  :root {
-    --texto-xl: 24px;
-    --texto-l: 18px;
-    --espacio-xl: 24px;
+@media (max-width: 768px) {
+  /* Tablas: mostrar indicador de scroll */
+  .tabla-responsive::after {
+    content: "← Desliza para ver más →";
+    display: block;
+    text-align: center;
+    color: var(--texto-secundario);
+    font-size: var(--texto-s);
+    margin-top: var(--espacio-s);
+    font-style: italic;
   }
   
-  /* Header más compacto */
-  header h1 {
-    font-size: var(--texto-l);
+  /* Tablas más compactas en móvil */
+  table {
+    font-size: var(--texto-s);
   }
   
-  /* Navegación en columna */
-  nav ul {
-    flex-direction: column;
-    gap: var(--espacio-s);
-  }
-  
-  nav a {
-    width: 100%;
-  }
-  
-  /* Alfabeto más compacto */
-  .alfabeto-grid {
-    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
-    gap: 4px;
-  }
-  
-  .alfabeto-grid a {
-    padding: 4px;
-    font-size: var(--texto-m);
-  }
-  
-  /* Formularios ocupan todo el ancho */
-  form {
-    padding: var(--espacio-m);
-  }
-  
-  /* Botones más grandes para dedos */
-  button,
-  .boton,
-  nav a {
-    min-height: 48px;
-    font-size: var(--texto-m);
+  th, td {
+    padding: var(--espacio-s);
   }
 }
 
-/* ============ TABLET (481px - 767px) ============ */
-@media (min-width: 481px) and (max-width: 767px) {
-  /* Noticias en 2 columnas */
-  #noticias {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  /* Navegación en 2 filas */
-  nav ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--espacio-s);
-  }
-}
-
-/* ============ TABLET GRANDE / DESKTOP (768px+) ============ */
-@media (min-width: 768px) and (max-width:1024p) {
-  /* Contenedor más ancho */
-  .contenedor {
-    padding: 0 var(--espacio-l);
-  }
-  
-  /* Header con logo y título en línea */
+/* ============ TABLET (768px - 1024px) ============ */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Header y navegación en horizontal */
   header {
     display: flex;
     align-items: center;
@@ -84,7 +38,6 @@
     flex-wrap: wrap;
   }
   
-  /* Navegación horizontal */
   nav ul {
     display: flex;
     flex-direction: row;
@@ -97,95 +50,38 @@
     grid-template-columns: repeat(2, 1fr);
     gap: var(--espacio-l);
   }
-  
-  /* Alfabeto más espaciado */
-  .alfabeto-grid {
-    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-    gap: var(--espacio-s);
+}
+
+/* ============ DESKTOP / PANTALLAS GRANDES (1024px+) ============ */
+@media (min-width: 1024px) {
+  /* Contenedor más espacioso */
+  header, main, footer {
+    padding: 0 var(--espacio-l);
   }
   
-  /* Formularios con mejor alineación */
-  .campo-inline {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    align-items: start;
+  /* Navegación completamente horizontal */
+  nav ul {
+    display: flex;
+    flex-direction: row;
     gap: var(--espacio-m);
   }
   
-  .campo-inline label {
-    text-align: right;
-    padding-top: var(--espacio-s);
+  /* Noticias en grid según layout del index */
+  #noticias {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-
 /* ============ PANTALLAS MUY GRANDES (1920px+) ============ */
 @media (min-width: 1920px) {
-  /* Limitar ancho máximo del contenido */
-  .contenedor {
-    max-width: 1600px;
-  }
-  
-  /* Noticias en 4 columnas */
-  #noticias {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  
-  /* Aumentar espaciados */
+  /* Aumentar espaciados para aprovechar el espacio */
   :root {
     --espacio-xl: 48px;
   }
 }
 
-/* ============ MODO IMPRESIÓN ============ */
-@media print {
-  /* Ocultar navegación y elementos innecesarios */
-  nav,
-  .skip-link,
-  button,
-  .boton {
-    display: none;
-  }
-  
-  /* Resetear colores para impresión */
-  body {
-    background: white;
-    color: black;
-  }
-  
-  /* Evitar saltos de página dentro de artículos */
-  article {
-    page-break-inside: avoid;
-    box-shadow: none;
-    border: 1px solid #000;
-  }
-  
-  /* Mostrar URLs de enlaces */
-  a::after {
-    content: " (" attr(href) ")";
-    font-size: 0.8em;
-    color: #666;
-  }
-}
-
-/* ============ ORIENTACIÓN ============ */
-/* WCAG 1.3.4 - El contenido debe verse bien en cualquier orientación */
-@media (orientation: landscape) {
-  /* Aprovechar mejor el espacio horizontal */
-  .alfabeto-grid {
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-  }
-}
-
-@media (orientation: portrait) {
-  /* Optimizar para vertical */
-  nav ul {
-    flex-direction: column;
-  }
-}
-
-/* ============ PREFERENCIAS DE MOVIMIENTO ============ */
-/* Respetar preferencia de usuario para animaciones reducidas */
+/* ============ PREFERENCIAS DE USUARIO ============ */
+/* WCAG: Respetar preferencia de movimiento reducido */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
@@ -193,31 +89,42 @@
     scroll-behavior: auto !important;
   }
   
-  /* Mantener hover sin transición */
+  /* Mantener hover sin animación */
   button:hover,
-  a:hover {
+  a:hover,
+  nav a:hover {
     transform: none;
   }
 }
 
-/* ============ MODO OSCURO (OPCIONAL) ============ */
-/* Respetar preferencia del sistema */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --texto-oscuro: #f3f4f6;
-    --texto-claro: #9ca3af;
-    --fondo-blanco: #1f2937;
-    --fondo-gris: #111827;
-    --fondo-oscuro: #000000;
-    --borde-color: #374151;
+/* ============ MODO IMPRESIÓN ============ */
+@media print {
+  /* Ocultar elementos de navegación e interactivos */
+  nav,
+  .skip-link,
+  button,
+  .boton,
+  footer {
+    display: none;
   }
   
+  /* Resetear colores para ahorro de tinta */
   body {
-    background-color: var(--fondo-gris);
+    background: white;
+    color: black;
   }
   
-  /* Ajustar contraste de imágenes */
-  img {
-    opacity: 0.9;
+  /* Evitar saltos de página dentro de elementos */
+  article,
+  section {
+    page-break-inside: avoid;
+    box-shadow: none;
+  }
+  
+  /* Mostrar URLs de enlaces importantes */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
   }
 }

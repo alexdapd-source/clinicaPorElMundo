@@ -146,6 +146,8 @@ header {
 
 #buscador ul {
   justify-content: space-between;
+  gap:1px
+
 }
 
 /* NOTICIAS - ocupa columnas 1 y 2, fila 2 */

@@ -96,26 +96,3 @@ tfoot td {
   -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
   margin: var(--espacio-m) 0;
 }
-
-/* En móvil, mostramos un indicador de que se puede deslizar */
-@media (max-width: 767px) {
-  .tabla-responsive::after {
-    content: "← Desliza para ver más →";
-    display: block;
-    text-align: center;
-    color: var(--texto-secundario); /* Corregido: era --texto-claro que no existe */
-    font-size: var(--texto-s);
-    margin-top: var(--espacio-s);
-    font-style: italic;
-  }
-  
-  /* Reducimos el tamaño de fuente para que quepa más contenido */
-  table {
-    font-size: var(--texto-s);
-  }
-  
-  /* Padding más compacto en móviles para ahorrar espacio */
-  th, td {
-    padding: var(--espacio-s);
-  }
-}

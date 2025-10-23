@@ -11,6 +11,4 @@
 @import url('tables.css');
 
 /* 5. RESPONSIVE: Diseño adaptativo */
-
-
-/* 6. ACCESSIBILITY: Accesibilidad */
+@import url('responsive.css');
