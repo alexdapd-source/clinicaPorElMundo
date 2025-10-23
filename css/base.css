@@ -138,9 +138,21 @@ img {
   max-width: 100%; /* Se adapta al contenedor */
   width: auto; /* Mantiene proporción */
   height: auto; /* Mantiene proporción */
-  max-height: 800px; /* Límite realista para evitar imágenes demasiado grandes */
   display: block;
   object-fit: contain; /* Mantiene la proporción sin recortar */
+}
+
+/* Límite de altura solo para imágenes de contenido, no logos ni iconos */
+main img,
+article img {
+  max-height: 800px; /* Límite realista para evitar imágenes demasiado grandes */
+}
+
+/* Logo del header mantiene su tamaño específico */
+.logo img {
+  max-height: 75px; /* Tamaño fijo del logo */
+  width: 75px;
+  height: 75px;
 }
 
 /* ============ LISTAS ============ */
