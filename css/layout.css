@@ -35,7 +35,6 @@ nav a {
   display: block;
   padding: var(--espacio-s) var(--espacio-m);
   background-color: var(--color-primario);
-  color: var(--texto-blanco);
   text-decoration: none;
   border-radius: var(--borde-redondo);
   font-weight: bold;
@@ -198,7 +197,7 @@ section:has(img[src*="cuerpo.jpg"]) img {
 /* ============ FOOTER ============ */
 footer {
   background-color: var(--color-primario);
-  color: var(--texto-blanco);
+  color: var(--texto-principal);
   padding: var(--espacio-l) 0;
   text-align: center;
   margin-top: var(--espacio-xl);

@@ -7,7 +7,6 @@
 :root {
 /* Colores principales */
     --color-primario: #e0eaff;      /* Azul médico */
-    --color-primario-oscuro: #2563eb; /* Azul oscuro para enlaces (WCAG AA) */
     --color-secundario: #10b981;    /* Verde */
     --color-acento: #f59e0b;        /* Naranja */
     
@@ -115,8 +114,9 @@ em {  /*unidad relativa de medida tipográfica == cambia segun el escenario*/
 
 /* ============ ENLACES ============ */
 a {
-  color: var(--color-primario);
+  color: var(--texto-principal);
   text-decoration: underline;
+  font-weight: 500;
 }
 
 a:hover {     /*recuerda cambia el fondeado*/
