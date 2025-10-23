@@ -6,7 +6,8 @@
 /* ============ VARIABLES ============ */
 :root {
 /* Colores principales */
-    --color-primario: #b5c4e5;      /* Azul médico */
+    --color-primario: #e0eaff;      /* Azul médico */
+    --color-primario-oscuro: #2563eb; /* Azul oscuro para enlaces (WCAG AA) */
     --color-secundario: #10b981;    /* Verde */
     --color-acento: #f59e0b;        /* Naranja */
     
@@ -191,7 +192,7 @@ blockquote {
   top: -50px; /*lo ocultamos*/
   left: 0;
   background: var(--color-primario);
-  color: var(--texto-blanco);
+  color: var(--texto-principal);
   padding: var(--espacio-s) var(--espacio-m);
   text-decoration: none;
   border-radius: 0 0 var(--borde-redondo) 0;
@@ -207,7 +208,7 @@ blockquote {
 button,
 .boton {
   background-color: var(--color-primario);
-  color: var(--texto-blanco);
+  color: var(--texto-principal);
   border: none;
   padding: var(--espacio-s) var(--espacio-m);
   font-size: var(--texto-m);

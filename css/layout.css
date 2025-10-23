@@ -5,7 +5,7 @@
 
 /* ============ HEADER ============ */
 /* ORGANIZACIÓN DEL HEADER EN 4 FILAS */
-header, main, footer {
+main, footer {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;

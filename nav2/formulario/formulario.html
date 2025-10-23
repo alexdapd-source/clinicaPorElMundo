@@ -2,17 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario de salud - ClinicaporelMundo</title>
-  <link rel="stylesheet" href="../../css/main.css"/>
+  <link rel="stylesheet" href="../../css/main.css">
 </head>
 <body>
   <a href="#general_main" class="skip-link">Saltar al contenido</a>
   <header>
-         <div class="logo">
-             <a href="../../index.html"><img src="../../extra/logoClinica.jpg" alt="Logo de Clínica Por El Mundo" height="75" width="75"></a>
-             <h1>ClinicaPorElMundo</h1>
-         </div>
-         <nav class="navegadorPrincipal">
+        <div class="logo">
+            <a href="../../index.html"><img src="../../extra/logoClinica.jpg" alt="Logo de Clínica Por El Mundo" height="75" width="75"></a>
+            <h1>ClinicaPorElMundo</h1>
+        </div>
+        <nav class="navegadorPrincipal">
       <ul>
         <li><a href="../Enfdeldia/Enfermedaddeldia.html">Enfermedad del día</a></li>
         <li><a href="../enfermedadesusuales/enfermedadesusuales.html">Enfermedades más usuales</a></li>
@@ -28,29 +29,29 @@
     </div>
 
   <main id="general_main">
-    <h2>📋 Formulario de Análisis de Orina</h2>
+    <h2><span aria-hidden="true">📋</span> Formulario de Análisis de Orina</h2>
     <p>
-      ⚠️ <strong>Importante:</strong> Los campos marcados con * son obligatorios.  
+      <span aria-hidden="true">⚠️</span> <strong>Importante:</strong> Los campos marcados con * son obligatorios.  
     </p>
 
     <form action="respuesta-formulario.html" method="get">
-      <label for="correo">📧 Correo electrónico *:</label><br>
+      <label for="correo"><span aria-hidden="true">📧</span> Correo electrónico *:</label><br>
       <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required><br><br>
 
-      <label for="fecha">📅 Fecha de nacimiento *:</label><br>
+      <label for="fecha"><span aria-hidden="true">📅</span> Fecha de nacimiento *:</label><br>
       <input type="date" id="fecha" name="fecha" required><br><br>
 
-      <label for="edad">🎂 Edad (18-99) *:</label><br>
+      <label for="edad"><span aria-hidden="true">🎂</span> Edad (18-99) *:</label><br>
       <input type="number" id="edad" name="edad" min="18" max="99" step="1" placeholder="Ej: 34" required><br><br>
 
-      <label for="colororina">🎨 Color de la orina *:</label><br>
-      <input type="color" id="colororina" name="colororina" required>
+      <label for="colororina"><span aria-hidden="true">🎨</span> Color de la orina *:</label><br>
+      <input type="color" id="colororina" name="colororina">
       <small>Selecciona el color más parecido al observado.</small><br><br>
 
-      <label for="dolor">🩺 Nivel de dolor (0 = ninguno, 10 = máximo):</label><br>
+      <label for="dolor"><span aria-hidden="true">🩺</span> Nivel de dolor (0 = ninguno, 10 = máximo):</label><br>
       <input type="range" id="dolor" name="dolor" min="0" max="10" step="1"><br><br>
 
-      <label for="telefono">📞 Teléfono de contacto (formato: 600123456) *:</label><br>
+      <label for="telefono"><span aria-hidden="true">📞</span> Teléfono de contacto (formato: 600123456) *:</label><br>
       <input type="tel" id="telefono" name="telefono" pattern="[6-9][0-9]{8}" placeholder="600123456" required>
       <small>Debe empezar por 6, 7, 8 o 9 y tener 9 dígitos.</small><br><br>
 
