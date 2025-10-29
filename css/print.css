@@ -1,0 +1,140 @@
+/* print.css - Estilo para impresión 
+NO importa main.css - es independiente
+NO debe tener 'title' en el <link>
+*/
+
+/* Configuración de página */
+@page {
+    size: A4;
+    margin: 2cm;
+}
+
+/* Reset básico para impresión */
+* {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    color: black;
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ocultar elementos que no se deben imprimir */
+nav, 
+#navegadorIndex, 
+#navegadorPrincipal,
+form,
+button,
+.no-print {
+     display: none !important;
+}
+
+/* Header simplificado */
+header {
+    border-bottom: 2pt solid black;
+    padding-bottom: 0.5cm;
+    margin-bottom: 1cm;
+}
+
+header h1 {
+    font-size: 18pt;
+    margin: 0;
+}
+
+/* Contenido principal */
+main {
+    margin: 0;
+}
+
+/* Encabezados */
+h1 {
+    font-size: 18pt;
+    page-break-after: avoid;
+}
+
+h2 {
+    font-size: 16pt;
+    page-break-after: avoid;
+}
+
+h3 {
+    font-size: 14pt;
+    page-break-after: avoid;
+}
+
+/* Párrafos */
+p {
+    orphans: 3;
+    widows: 3;
+}
+
+/* Enlaces */
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+/* Mostrar URL de los enlaces */
+a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #555;
+}
+
+/* No mostrar URL para enlaces internos */
+a[href^="#"]:after,
+a[href^="javascript:"]:after {
+    content: "";
+}
+
+/* Imágenes */
+img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+}
+
+/* Tablas */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    page-break-inside: avoid;
+}
+
+th, td {
+    border: 1pt solid black;
+    padding: 0.3cm;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0 !important;
+    font-weight: bold;
+}
+
+/* Evitar saltos de página en elementos clave */
+article, section {
+    page-break-inside: avoid;
+}
+
+/* Footer simplificado */
+footer {
+    border-top: 1pt solid black;
+    padding-top: 0.5cm;
+    margin-top: 1cm;
+    font-size: 10pt;
+}
+
+/* Añadir URL de la página en el footer */
+footer:after {
+    content: "URL: " attr(data-url);
+    display: block;
+    margin-top: 0.3cm;
+}

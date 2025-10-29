@@ -3,6 +3,55 @@
     Estructura: header, nav, main, footer
    ========================================== */
 
+/* ============ RESET Y BOX-MODEL ============ */
+/* Reset universal para consistencia entre navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============ IMÁGENES RESPONSIVAS ============ */
+/* Comportamiento base para todas las imágenes */
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Límites específicos por contexto */
+main img,
+article img {
+  max-height: 800px;
+}
+
+.logo img {
+  max-height: 75px;
+}
+
+/* ============ ACCESIBILIDAD - SKIP LINK ============ */
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ============ DIMENSIONES MÍNIMAS PARA ACCESIBILIDAD ============ */
+/* Tamaño mínimo táctil para botones */
+button, 
+.boton {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-block;
+}
+
 /* ============ HEADER ============ */
 /* ORGANIZACIÓN DEL HEADER EN 4 FILAS */
 main, footer {
@@ -157,6 +206,7 @@ header {
   grid-template-columns: 1fr 1fr; /* 2 columnas para videos */
   grid-template-rows: auto auto; /* 2 filas para videos */
   gap: var(--espacio-m);
+  background-color: var(--fondo-blanco)
 }
 
 /* Estilos para los artículos de noticias */
@@ -166,6 +216,7 @@ header {
   background-color: var(--fondo-blanco);
   border-radius: var(--borde-redondo);
   box-shadow: var(--sombra);
+  background-color: var(--color-primario);
 }
 
 /* Videos responsivos */

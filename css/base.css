@@ -1,61 +1,5 @@
-/* ==========================================
-  BASE.CSS - ClinicaPorElMundo
-  Variables + Estilos básicos
-   ========================================== */
-
-/* ============ VARIABLES ============ */
-:root {
-/* Colores principales */
-    --color-primario: #e0eaff;      /* Azul médico */
-    --color-secundario: #10b981;    /* Verde */
-    --color-acento: #f59e0b;        /* Naranja */
-    
-    /* Colores de texto */
-    --texto-principal: #111111;
-    --texto-secundario: #505050;
-    --texto-blanco: #ffffff;
-    
-    /* Fondos */
-    --fondo-blanco: #ffffff;
-    --fondo-gris: #f3f4f6;
-    
-    /* Estados */
-    --color-error: #ef4444;
-    --color-exito: #10b981;
-  
-  /* Tipografía - Sistema S, M, L, XL */
-  --fuente-principal: Arial, sans-serif;
-  --fuente-titulos: Georgia, serif;
-  
-  --texto-s: 14px;
-  --texto-m: 16px;
-  --texto-l: 20px;
-  --texto-xl: 28px;
-  
-  /* Espaciado - Sistema S, M, L, XL */
-  --espacio-s: 8px;
-  --espacio-m: 16px;
-  --espacio-l: 24px;
-  --espacio-xl: 32px;
-  
-  /* Otros */
-  --borde-redondo: 8px;
-  --borde-color: #d1d5db;
-  --sombra: 0 2px 8px rgba(0, 0, 0, 0.1);
-
-  /* Anchos máximos para cada breakpoint */
-  --ancho-mobile: 95%;
-  --ancho-tablet: 90%;
-  --ancho-desktop: 80%;
-  --ancho-large: 70%;
-}
-
 /* ============ RESET BÁSICO ============ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Movido a layout.css para evitar duplicación */
 
 /* ============ HTML Y BODY ============ */
 html {
@@ -120,11 +64,11 @@ a {
 }
 
 a:hover {     /*recuerda cambia el fondeado*/
-  color: var(--color-secundario);
+  color: var(--texto-principal);
 }
 
 a:visited { 
-  color: #7c3aed;
+  color: var(--color-visitado);
 }
 
 /* IMPORTANTE: Marcamos en movimiento con teclado el cambio de color  */
@@ -135,25 +79,12 @@ a:focus {
 }
 
 /* ============ IMÁGENES ============ */
-img { 
-  max-width: 100%; /* Se adapta al contenedor */
-  width: auto; /* Mantiene proporción */
-  height: auto; /* Mantiene proporción */
-  display: block;
-  object-fit: contain; /* Mantiene la proporción sin recortar */
-}
+/* Properties de layout de imágenes movidas a layout.css para evitar duplicación */
+/* Solo quedan aquí las properties de presentación visual específicas */
 
-/* Límite de altura solo para imágenes de contenido, no logos ni iconos */
-main img,
-article img {
-  max-height: 800px; /* Límite realista para evitar imágenes demasiado grandes */
-}
-
-/* Logo del header mantiene su tamaño específico */
 .logo img {
-  max-height: 75px; /* Tamaño fijo del logo */
-  width: 75px;
-  height: 75px;
+  width: 75px; /* Ancho específico del logo - presentación */
+  height: 75px; /* Alto específico del logo - presentación */
 }
 
 /* ============ LISTAS ============ */
@@ -187,24 +118,21 @@ blockquote {
 } 
 
 /* ============ SKIP LINK (Accesibilidad) ============ */
+/* Properties de layout movidas a layout.css - solo estilos visuales aquí */
 .skip-link {
-  position: absolute;
-  top: -50px; /*lo ocultamos*/
-  left: 0;
   background: var(--color-primario);
   color: var(--texto-principal);
   padding: var(--espacio-s) var(--espacio-m);
   text-decoration: none;
   border-radius: 0 0 var(--borde-redondo) 0;
-  z-index: 1000;
 }
 
 .skip-link:focus {
-  top: 0;
   outline: 3px solid var(--color-acento);
 }
 
 /* ============ BOTONES ============ */
+/* Dimensiones mínimas movidas a layout.css - solo estilos visuales aquí */
 button,
 .boton {
   background-color: var(--color-primario);
@@ -217,8 +145,6 @@ button,
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  min-width: 44px;
-  min-height: 44px;
 }
 
 button:hover,

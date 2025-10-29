@@ -12,3 +12,6 @@
 
 /* 5. RESPONSIVE: Diseño adaptativo */
 @import url('responsive.css');
+
+/* night.css - Modo Noche personalizado */
+@import url('variables.css');
