@@ -1,40 +1,23 @@
-/* ==========================================
-    LAYOUT VERTICAL - ClinicaPorElMundo
-    Estilos específicos para Móvil/Portrait
-   ========================================== */
-@media (max-width: 768px) {
-  
-  /* ============ HEADER VERTICAL ============ */
-  /* 3 columnas: Logo | Título vertical | Nav1 */
+@media (max-width: 768px) {  
   #cambio {
-    grid-template-columns: auto auto 1fr;
-    gap: var(--espacio-xs);
-    align-items: center;
-  }
-  
-  /* Logo en columna 1 */
-  .logo img {
-    grid-column: 1;
-    max-height: nave;
-    justify-self: start;
-  }
-  
-  /* Título en columna 2 - escritura vertical */
-  .logo h1 {
-    grid-column: 2;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    font-size: var(--texto-xl);
-    margin: 0;
-    padding: 0;
-    white-space: wrap;
-    justify-self: center;
-  }
-  
-  .logo {
-    display: contents;
-  }
-  
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  justify-self: start;
+}
+
+#navegadorIndex {
+  justify-self: end;
+}
+
+#navegadorIndex ul {
+  display: flex;
+  gap: var(--espacio-m);
+}
   /* Navegación en columna 3 - apilada verticalmente */
   #navegadorIndex {
     grid-column: 3;

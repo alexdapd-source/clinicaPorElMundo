@@ -5,7 +5,6 @@
 
 /* Este tema se activa automáticamente cuando el usuario tiene 
    configurado "Alto contraste" en su sistema operativo */
-@media (prefers-contrast: high) {
 
 /* ========== VARIABLES DE ALTO CONTRASTE ========== */
 :root {
@@ -219,5 +218,3 @@ iframe {
     text-decoration: underline !important;
   }
 }
-
-} 

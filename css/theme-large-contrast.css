@@ -1,0 +1,33 @@
+/* ==========================================
+    THEME LARGE + CONTRAST - ClinicaPorElMundo
+    Texto Grande + Alto Contraste combinados
+   ========================================== */
+
+/* Importamos ambos temas */
+@import url('theme-large-text.css');
+@import url('theme-contrast.css');
+
+/* Ajustes específicos para la combinación */
+:root {
+  /* Espaciado extra grande para mejor legibilidad */
+  --espacio-s-large: calc(var(--espacio-s) * 1.5);
+  --espacio-m-large: calc(var(--espacio-m) * 1.5);
+  --espacio-l-large: calc(var(--espacio-l) * 1.5);
+  --espacio-xl-large: calc(var(--espacio-xl) * 1.5);
+}
+
+/* Override para mejorar la combinación de ambos temas */
+body {
+  padding: var(--espacio-m-large) !important;
+}
+
+main {
+  padding: var(--espacio-l-large) !important;
+}
+
+/* Botones y enlaces más grandes con alto contraste */
+a, button, input[type="submit"] {
+  padding: var(--espacio-m-large) var(--espacio-l-large) !important;
+  font-weight: 900 !important;
+  border-width: 3px !important;
+}

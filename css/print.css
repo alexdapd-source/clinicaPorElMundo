@@ -1,15 +1,8 @@
-/* print.css - Estilo para impresión 
-NO importa main.css - es independiente
-NO debe tener 'title' en el <link>
-*/
-
-/* Configuración de página */
 @page {
     size: A4;
     margin: 2cm;
 }
 
-/* Reset básico para impresión */
 * {
     background: transparent !important;
     color: black !important;
@@ -34,7 +27,7 @@ nav,
 form,
 button,
 .no-print {
-     display: none !important;
+    display: none !important;
 }
 
 /* Header simplificado */
@@ -132,7 +125,6 @@ footer {
     font-size: 10pt;
 }
 
-/* Añadir URL de la página en el footer */
 footer:after {
     content: "URL: " attr(data-url);
     display: block;
