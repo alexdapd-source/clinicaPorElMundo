@@ -32,9 +32,9 @@
 body {
   font-size: var(--texto-m-large) !important;
   line-height: var(--line-height-large) !important;
-  max-width: 80ch !important; /* Líneas no muy largas para legibilidad */
-  margin: 0 auto !important;
 }
+
+/* No modificar el layout, solo el texto */
 
 /* ========== ENCABEZADOS GRANDES ========== */
 
@@ -135,25 +135,7 @@ th {
   font-size: var(--texto-l-large) !important;
 }
 
-/* ========== CONTENEDORES Y ESPACIADO ========== */
-
-/* Artículos con más espaciado */
-article {
-  padding: var(--espacio-l-large) !important;
-  margin-bottom: var(--espacio-xl-large) !important;
-}
-
-/* Secciones con espaciado proporcional */
-section {
-  padding: var(--espacio-l-large) 0 !important;
-  margin-bottom: var(--espacio-l-large) !important;
-}
-
-/* Header y footer con más espaciado */
-header,
-footer {
-  padding: var(--espacio-l-large) !important;
-}
+/* Solo modificamos el texto, respetamos el layout original */
 
 /* ========== ELEMENTOS ESPECIALES ========== */
 
@@ -183,7 +165,6 @@ pre {
   /* En móvil, aumentar aún más para compensar pantalla pequeña */
   body {
     font-size: calc(var(--texto-m-large) * 1.1) !important;
-    max-width: 70ch !important;
   }
   
   h1 {
@@ -203,10 +184,7 @@ pre {
 }
 
 @media (min-width: 1200px) {
-  /* En pantallas grandes, permitir líneas un poco más largas */
-  body {
-    max-width: 90ch !important;
-  }
+  /* En pantallas grandes, mantener layout original */
 }
 
 /* ========== MODO PRINT PARA TEXTO GRANDE ========== */
