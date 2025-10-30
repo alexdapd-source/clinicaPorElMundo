@@ -1,8 +1,11 @@
+/* 0. VARIABLES: Variables de colores (incluye modo oscuro) */
+@import url('variables.css');
+
 /* 1. BASE: Variables y estilos básicos */
 @import url('base.css');
 
 /* 2. LAYOUT: Estructura de la página*/ 
-@import url('layout.css');
+@import url('layoutv2.css');
 
 /* 3. FORMS: Estilos de formularios */
 @import url('forms.css');
@@ -12,6 +15,3 @@
 
 /* 5. RESPONSIVE: Diseño adaptativo */
 @import url('responsive.css');
-
-/* night.css - Modo Noche personalizado */
-@import url('variables.css');

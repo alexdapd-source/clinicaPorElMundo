@@ -1,5 +1,9 @@
 /* ============ RESET BÁSICO ============ */
-/* Movido a layout.css para evitar duplicación */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /* ============ HTML Y BODY ============ */
 html {
@@ -26,6 +30,7 @@ h1 {
 h2 {
   font-family: var(--fuente-titulos);
   font-size: var(--texto-l);
+  margin-top: var(--espacio-m);
   margin-bottom: var(--espacio-m);
   color: var(--texto-secundario);
 }
@@ -79,12 +84,25 @@ a:focus {
 }
 
 /* ============ IMÁGENES ============ */
-/* Properties de layout de imágenes movidas a layout.css para evitar duplicación */
-/* Solo quedan aquí las properties de presentación visual específicas */
+img { 
+  max-width: 100%; /* Se adapta al contenedor */
+  width: auto; /* Mantiene proporción */
+  height: auto; /* Mantiene proporción */
+  display: block;
+  object-fit: contain; /* Mantiene la proporción sin recortar */
+}
 
+/* Límite de altura solo para imágenes de contenido, no logos ni iconos */
+main img,
+article img {
+  max-height: 800px; /* Límite realista para evitar imágenes demasiado grandes */
+}
+
+/* Logo del header mantiene su tamaño específico */
 .logo img {
-  width: 75px; /* Ancho específico del logo - presentación */
-  height: 75px; /* Alto específico del logo - presentación */
+  max-height: 75px; /* Tamaño fijo del logo */
+  width: 75px;
+  height: 75px;
 }
 
 /* ============ LISTAS ============ */
@@ -118,21 +136,24 @@ blockquote {
 } 
 
 /* ============ SKIP LINK (Accesibilidad) ============ */
-/* Properties de layout movidas a layout.css - solo estilos visuales aquí */
 .skip-link {
+  position: absolute;
+  top: -50px; /*lo ocultamos*/
+  left: 0;
   background: var(--color-primario);
   color: var(--texto-principal);
   padding: var(--espacio-s) var(--espacio-m);
   text-decoration: none;
   border-radius: 0 0 var(--borde-redondo) 0;
+  z-index: 1000;
 }
 
 .skip-link:focus {
+  top: 0;
   outline: 3px solid var(--color-acento);
 }
 
 /* ============ BOTONES ============ */
-/* Dimensiones mínimas movidas a layout.css - solo estilos visuales aquí */
 button,
 .boton {
   background-color: var(--color-primario);
@@ -145,6 +166,8 @@ button,
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 button:hover,

@@ -1,0 +1,159 @@
+/* ==========================================
+    LAYOUT V2 - ClinicaPorElMundo
+    Estilos comunes compartidos entre layouts
+    horizontal y vertical
+   ========================================== */
+@import url('layout-horizontal.css');
+@import url('layout-vertical.css');
+/* ============ RESET Y BOX-MODEL ============ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============ IMÁGENES RESPONSIVAS ============ */
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+main img,
+article img {
+  max-height: 800px;
+}
+
+.logo img {
+  max-height: 75px;
+}
+
+/* ============ ACCESIBILIDAD ============ */
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+button, 
+.boton {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-block;
+}
+
+/* ============ ESTRUCTURA BASE ============ */
+main, footer {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--espacio-m);
+}
+
+/* ============ ESTILOS COMUNES NAVEGACIÓN ============ */
+nav {
+  margin: var(--espacio-m) 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  border-radius: var(--borde-redondo);
+  font-weight: bold;
+  min-width: 44px;
+  min-height: 44px;
+  text-align: center;
+  background-color: var(--color-primario);
+  color: var(--texto-principal);
+}
+
+nav a:hover {
+  background-color: var(--color-secundario);
+  transform: translateY(-2px);
+  box-shadow: var(--sombra);
+}
+
+nav a:focus {
+  outline: 3px solid var(--color-acento);
+  outline-offset: 2px;
+}
+
+/* ============ ESTILOS COMUNES ARTÍCULOS ============ */
+article {
+  padding: var(--espacio-m);
+  margin-bottom: var(--espacio-m);
+  border-radius: var(--borde-redondo);
+  box-shadow: var(--sombra);
+  background-color: var(--fondo-blanco);
+}
+
+article h3 {
+  margin-bottom: var(--espacio-s);
+}
+
+/* ============ ESTILOS COMUNES FOOTER ============ */
+footer {
+  padding: var(--espacio-l) 0;
+  text-align: center;
+  margin-top: var(--espacio-xl);
+  background-color: var(--color-primario);
+  color: var(--texto-principal);
+}
+
+footer p {
+  margin-bottom: var(--espacio-s);
+}
+
+footer a {
+  color: var(--texto-principal);
+}
+
+footer a:hover {
+  color: var(--texto-principal);
+}
+
+/* ============ ESTILOS COMUNES HEADER ============ */
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--fondo-gris);
+  padding-top: var(--espacio-m);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-s);
+}
+
+.logo h1 {
+  margin: 0;
+  text-align: center;
+}
+
+/* ============ ESTILOS COMUNES VIDEOS ============ */
+iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: var(--borde-redondo);
+}
+
+

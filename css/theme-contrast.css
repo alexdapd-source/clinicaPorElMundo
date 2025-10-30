@@ -1,0 +1,223 @@
+/* ==========================================
+    TEMA ALTO CONTRASTE - ClinicaPorElMundo
+    Tema de accesibilidad con alto contraste
+   ========================================== */
+
+/* Este tema se activa automáticamente cuando el usuario tiene 
+   configurado "Alto contraste" en su sistema operativo */
+@media (prefers-contrast: high) {
+
+/* ========== VARIABLES DE ALTO CONTRASTE ========== */
+:root {
+  /* Colores principales de alto contraste */
+  --contraste-fondo-principal: #000000;
+  --contraste-texto-principal: #ffffff;
+  --contraste-enlace: #ffff00;
+  --contraste-enlace-hover: #00ffff;
+  --contraste-enfoque: #ffff00;
+  
+  /* Sobrescribir variables existentes para alto contraste */
+  --color-primario: var(--contraste-fondo-principal);
+  --color-secundario: var(--contraste-enlace-hover);
+  --color-acento: var(--contraste-enlace);
+  
+  --texto-principal: var(--contraste-texto-principal);
+  --texto-secundario: var(--contraste-texto-principal);
+  --texto-blanco: var(--contraste-texto-principal);
+  
+  --fondo-blanco: var(--contraste-fondo-principal);
+  --fondo-gris: var(--contraste-fondo-principal);
+  --fondo-hover: #333333;
+  
+  /* Bordes más visibles */
+  --borde-color: var(--contraste-texto-principal);
+  --borde-grosor: 2px;
+}
+
+/* ========== ESTILOS BASE DE ALTO CONTRASTE ========== */
+
+/* Fondo y texto principales */
+body {
+  background-color: var(--contraste-fondo-principal) !important;
+  color: var(--contraste-texto-principal) !important;
+}
+
+/* Enlaces amarillos brillantes con subrayado */
+a {
+  color: var(--contraste-enlace) !important;
+  text-decoration: underline !important;
+  font-weight: bold !important;
+}
+
+a:hover,
+a:focus {
+  color: var(--contraste-enlace-hover) !important;
+  text-decoration: underline !important;
+}
+
+/* Encabezados en blanco */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--contraste-texto-principal) !important;
+}
+
+/* ========== ELEMENTOS INTERACTIVOS ========== */
+
+/* Botones con contraste invertido */
+button,
+.boton {
+  background-color: var(--contraste-texto-principal) !important;
+  color: var(--contraste-fondo-principal) !important;
+  border: var(--borde-grosor) solid var(--contraste-texto-principal) !important;
+  font-weight: bold !important;
+}
+
+button:hover,
+.boton:hover {
+  background-color: var(--contraste-enlace) !important;
+  color: var(--contraste-fondo-principal) !important;
+}
+
+/* Formularios claramente visibles */
+input,
+select,
+textarea {
+  background-color: var(--contraste-fondo-principal) !important;
+  color: var(--contraste-texto-principal) !important;
+  border: var(--borde-grosor) solid var(--contraste-texto-principal) !important;
+  padding: var(--espacio-s) !important;
+}
+
+/* ========== TABLAS Y ESTRUCTURAS ========== */
+
+/* Tablas con bordes gruesos */
+table, 
+th, 
+td {
+  border: var(--borde-grosor) solid var(--contraste-texto-principal) !important;
+  border-collapse: collapse !important;
+  background-color: var(--contraste-fondo-principal) !important;
+  color: var(--contraste-texto-principal) !important;
+}
+
+th {
+  background-color: var(--contraste-texto-principal) !important;
+  color: var(--contraste-fondo-principal) !important;
+  font-weight: bold !important;
+}
+
+/* ========== NAVEGACIÓN ========== */
+
+/* Enlaces de navegación más contrastados */
+nav a {
+  background-color: var(--contraste-fondo-principal) !important;
+  color: var(--contraste-enlace) !important;
+  border: var(--borde-grosor) solid var(--contraste-enlace) !important;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--contraste-enlace) !important;
+  color: var(--contraste-fondo-principal) !important;
+}
+
+/* ========== CONTENEDORES ========== */
+
+/* Artículos y secciones */
+article,
+section {
+  background-color: var(--contraste-fondo-principal) !important;
+  border: var(--borde-grosor) solid var(--contraste-texto-principal) !important;
+  color: var(--contraste-texto-principal) !important;
+}
+
+/* Header y footer */
+header,
+footer {
+  background-color: var(--contraste-fondo-principal) !important;
+  color: var(--contraste-texto-principal) !important;
+  border: var(--borde-grosor) solid var(--contraste-texto-principal) !important;
+}
+
+/* ========== ACCESIBILIDAD EXTREMA ========== */
+
+/* Foco súper visible - WCAG AAA */
+*:focus {
+  outline: 4px solid var(--contraste-enfoque) !important;
+  outline-offset: var(--espacio-xs) !important;
+  box-shadow: 0 0 0 2px var(--contraste-fondo-principal), 
+              0 0 0 6px var(--contraste-enfoque) !important;
+}
+
+/* Skip links súper visibles */
+.skip-link:focus {
+  background-color: var(--contraste-enlace) !important;
+  color: var(--contraste-fondo-principal) !important;
+  font-weight: bold !important;
+  font-size: var(--texto-l) !important;
+  padding: var(--espacio-m) !important;
+}
+
+/* ========== IMÁGENES Y MEDIOS ========== */
+
+/* Imágenes con borde para separar del fondo */
+img {
+  border: var(--borde-grosor) solid var(--contraste-texto-principal) !important;
+}
+
+/* Videos más visibles */
+iframe {
+  border: 4px solid var(--contraste-enlace) !important;
+}
+
+/* ========== UTILIDADES EXTRA ========== */
+
+/* Texto seleccionado súper visible */
+::selection {
+  background-color: var(--contraste-enlace) !important;
+  color: var(--contraste-fondo-principal) !important;
+}
+
+/* Scrollbars contrastados (Webkit) */
+::-webkit-scrollbar {
+  background-color: var(--contraste-fondo-principal) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--contraste-texto-principal) !important;
+  border: 1px solid var(--contraste-enlace) !important;
+}
+
+/* ========== RESPONSIVE CONTRAST ========== */
+
+@media (max-width: 768px) {
+  /* En móvil, aumentar aún más el contraste */
+  *:focus {
+    outline-width: 6px !important;
+    box-shadow: 0 0 0 3px var(--contraste-fondo-principal), 
+                0 0 0 9px var(--contraste-enfoque) !important;
+  }
+  
+  /* Botones más grandes en móvil para accesibilidad */
+  button,
+  .boton {
+    min-height: 48px !important;
+    font-size: var(--texto-l) !important;
+  }
+}
+
+/* ========== MODO PRINT CONTRAST ========== */
+
+@media print {
+  /* En impresión, mantener el alto contraste pero invertido */
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+}
+
+} 

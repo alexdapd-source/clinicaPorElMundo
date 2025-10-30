@@ -41,16 +41,33 @@ input[type="tel"],
 input[type="date"],
 input[type="number"],
 input[type="search"],
-input[type="color"],
 textarea,
 select {
   width: 100%;
   padding: var(--espacio-s);
   font-size: var(--texto-m);
+  color: var(--texto-principal);
   border: 2px solid var(--borde-color);
   border-radius: var(--borde-redondo);
   font-family: var(--fuente-principal);
   background-color: var(--fondo-blanco);
+}
+
+/* ============ INPUT COLOR (SELECTOR DE COLOR) ============ */
+input[type="color"] {
+  width: 100px;
+  height: 44px;
+  padding: 4px;
+  border: 2px solid var(--borde-color);
+  border-radius: var(--borde-redondo);
+  background-color: var(--fondo-blanco);
+  cursor: pointer;
+}
+
+input[type="color"]:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px rgba(181, 196, 229, 0.3);
 }
 
 /* ACCESIBILIDAD: Resaltamos visualmente el campo activo para que el usuario sepa dónde está escribiendo */
@@ -70,9 +87,12 @@ textarea {
 
 /* Placeholder más claro para diferenciarlo del texto real */
 input::placeholder,
-textarea::placeholder {
+textarea::placeholder,input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"]{
   color: #9ca3af; /* Gris claro para el placeholder */
 }
+
 
 /* ============ SELECT MÚLTIPLE ============ */
 select[multiple] {

@@ -4,8 +4,8 @@
 
 :root {
   /* ========== COLORES - MODO CLARO ========== */
-  --color-primario: #3b82f6;
-  --color-secundario: #215543;
+  --color-primario: #aacbff;
+  --color-secundario: #68ebbd;
   --color-acento: #f59e0b;
   
   --texto-principal: #111827;
@@ -18,7 +18,7 @@
   
   --color-advertencia: #f59e0b;
   --color-info: #3b82f6;
-  --color-visitado:#C7B2ED;
+  --color-visitado:#6431c4;
   
   /* ========== TIPOGRAFÍA ========== */
   --fuente-principal: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -61,24 +61,10 @@
   --bp-desktop: 1024px;
   --bp-large: 1440px;
   
-  /* ========== BORDES Y SOMBRAS ========== */
-  --borde-fino: 1px;
-  --borde-medio: 2px;
-  --borde-grueso: 4px;
-  
-  --borde-redondo-s: 4px;
-  --borde-redondo-m: 8px;
-  --borde-redondo-l: 12px;
-  --borde-redondo-xl: 16px;
-  --borde-circular: 50%;
-  
+  /* ========== BORDES Y SOMBRAS SIMPLIFICADOS ========== */
+  --borde-redondo: 8px;
   --borde-color: #d1d5db;
-  --borde-color-hover: #9ca3af;
-  
-  --sombra-s: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --sombra-m: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --sombra-l: 0 10px 15px rgba(0, 0, 0, 0.1);
-  --sombra-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+  --sombra: 0 2px 8px rgba(0, 0, 0, 0.1);
   
   /* ========== TRANSICIONES ========== */
   --transicion-rapida: 0.15s ease;
@@ -112,19 +98,17 @@
     --fondo-hover: #374151;
     
     --borde-color: #4b5563;
-    --borde-color-hover: #6b7280;
+    --color-visitado: #C7B2ED;
     
-    /* Sombras más sutiles en oscuro */
-    --sombra-s: 0 1px 3px rgba(0, 0, 0, 0.3);
-    --sombra-m: 0 4px 6px rgba(0, 0, 0, 0.4);
-    --sombra-l: 0 10px 15px rgba(0, 0, 0, 0.5);
+    /* Sombra única para modo oscuro */
+    --sombra: 0 2px 8px rgba(0, 0, 0, 0.4);
   }
 }
 
 
 
 /* ============================================
-   RESPONSIVE - AJUSTES POR BREAKPOINT
+  RESPONSIVE - AJUSTES POR BREAKPOINT
    ============================================ */
 
 /* Tablet (768px+) */

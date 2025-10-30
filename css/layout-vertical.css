@@ -1,0 +1,141 @@
+/* ==========================================
+    LAYOUT VERTICAL - ClinicaPorElMundo
+    Estilos específicos para Móvil/Portrait
+   ========================================== */
+@media (max-width: 768px) {
+  
+  /* ============ HEADER VERTICAL ============ */
+  /* 3 columnas: Logo | Título vertical | Nav1 */
+  #cambio {
+    grid-template-columns: auto auto 1fr;
+    gap: var(--espacio-xs);
+    align-items: center;
+  }
+  
+  /* Logo en columna 1 */
+  .logo img {
+    grid-column: 1;
+    max-height: nave;
+    justify-self: start;
+  }
+  
+  /* Título en columna 2 - escritura vertical */
+  .logo h1 {
+    grid-column: 2;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: var(--texto-xl);
+    margin: 0;
+    padding: 0;
+    white-space: wrap;
+    justify-self: center;
+  }
+  
+  .logo {
+    display: contents;
+  }
+  
+  /* Navegación en columna 3 - apilada verticalmente */
+  #navegadorIndex {
+    grid-column: 3;
+    justify-self: end;
+  }
+  
+  #navegadorIndex ul {
+    flex-direction: column;
+    gap: var(--espacio-xs);
+  }
+  
+  #navegadorIndex li {
+    width: 100%;
+  }
+  
+  #navegadorIndex a {
+    padding: var(--espacio-xs) var(--espacio-s);
+    font-size: var(--texto-s);
+  }
+  
+  /* Hamburguesa oculta sin JavaScript */
+  .menu-hamburguesa {
+    display: none;
+  }
+  
+  /* Navegación principal vertical con hamburguesa */
+  .navegadorPrincipal ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+  
+  .navegadorPrincipal li {
+    border-bottom: 1px solid var(--borde-color);
+  }
+  
+  #cita_index {
+    margin-top: var(--espacio-s);
+    padding: var(--espacio-s);
+  }
+  
+  /* ============ NAVEGACIÓN VERTICAL ============ */
+  nav ul {
+    flex-direction: column;
+    gap: var(--espacio-xs);
+  }
+  
+  nav a {
+    width: 100%;
+    padding: var(--espacio-m);
+  }
+  
+  /* ============ MAIN VERTICAL - 1 COLUMNA ============ */
+  #index_main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: var(--espacio-m);
+  }
+  
+  /* Buscador primero */
+  #buscador {
+    grid-column: 1;
+    grid-row: auto;
+    margin-bottom: var(--espacio-m);
+    order: 0;
+  }
+  
+  #buscador ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Mapa del cuerpo SEGUNDO en móvil (order: 1) */
+  #mapaCuerpoHumano,
+  section:has(img[src*="cuerpo.jpg"]) {
+    grid-column: 1;
+    grid-row: auto;
+    order: 1;
+  }
+  
+  /* Noticias TERCERO en móvil (order: 2) */
+  #noticias {
+    grid-column: 1;
+    grid-row: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    order: 2;
+  }
+  
+  /* ============ ESPACIADOS AJUSTADOS ============ */
+  main, footer {
+    padding: 0 var(--espacio-s);
+  }
+  
+  article {
+    padding: var(--espacio-s);
+    margin-bottom: var(--espacio-s);
+  }
+  
+  footer {
+    margin-top: var(--espacio-l);
+    padding: var(--espacio-m) 0;
+  }
+}

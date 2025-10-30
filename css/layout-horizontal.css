@@ -1,0 +1,133 @@
+/* ==========================================
+    LAYOUT HORIZONTAL - ClinicaPorElMundo
+    Estilos específicos para Desktop/Landscape
+   ========================================== */
+
+/* ============ HEADER HORIZONTAL ============ */
+#cambio {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  justify-self: start;
+}
+
+#navegadorIndex {
+  justify-self: end;
+}
+
+#navegadorIndex ul {
+  display: flex;
+  gap: var(--espacio-m);
+}
+
+.navegadorPrincipal ul {
+  display: flex;
+  gap: var(--espacio-m);
+  padding: var(--espacio-m);
+  justify-content: space-between;
+  border-top: 2px solid var(--color-primario);
+}
+
+#cita_index {
+  margin-top: var(--espacio-s);
+  padding: var(--espacio-m);
+}
+
+/* ============ NAVEGACIÓN HORIZONTAL ============ */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-s);
+}
+
+nav a {
+  padding: var(--espacio-s) var(--espacio-m);
+}
+
+/* Hamburguesa oculta en horizontal */
+.menu-hamburguesa {
+  display: none;
+}
+
+/* ============ MAIN HORIZONTAL - 3 COLUMNAS ============ */
+#index_main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: var(--espacio-l);
+}
+
+#buscador {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  margin-bottom: var(--espacio-l);
+}
+
+#buscador ul {
+  justify-content: space-between;
+  gap: 1px;
+}
+
+/* Mapa del cuerpo a la izquierda */
+#mapaCuerpoHumano,
+section:has(img[src*="cuerpo.jpg"]) {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section:has(img[src*="cuerpo.jpg"]) img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--borde-redondo);
+  box-shadow: var(--sombra);
+}
+
+/* Noticias ocupan columnas 2 y 3 */
+#noticias {
+  grid-column: 2 / 4;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: var(--espacio-m);
+  background-color: var(--fondo-blanco);
+}
+
+#noticias article {
+  margin: 0;
+  padding: var(--espacio-m);
+  background-color: var(--color-primario);
+}
+
+/* ============================================
+   LAYOUT TABLET HORIZONTAL (Intermedio)
+   ============================================ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* 2 columnas en tablet */
+  #index_main {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  #buscador {
+    grid-column: 1 / -1;
+  }
+  
+  #noticias {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  #mapaCuerpoHumano,
+  section:has(img[src*="cuerpo.jpg"]) {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+}

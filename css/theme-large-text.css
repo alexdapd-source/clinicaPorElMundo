@@ -1,0 +1,227 @@
+/* Este tema se activa automáticamente cuando el usuario tiene 
+   configurado "Texto grande" en su sistema operativo */
+@media (prefers-reduced-motion: no-preference) and (min-resolution: 1dppx) {
+
+
+/* ========== VARIABLES DE TEXTO GRANDE ========== */
+:root {
+  /* Escalas tipográficas aumentadas - basadas en las variables existentes */
+  --texto-xs-large: calc(var(--texto-xs) * 1.2); 
+  --texto-s-large: calc(var(--texto-s) * 1.2);   
+  --texto-m-large: calc(var(--texto-m) * 1.2);   
+  --texto-l-large: calc(var(--texto-l) * 1.2);   
+  --texto-xl-large: calc(var(--texto-xl) * 1.3); 
+  --texto-2xl-large: calc(var(--texto-2xl) * 1.3); 
+  --texto-3xl-large: calc(var(--texto-3xl) * 1.3); 
+  
+  /* Line height más cómodo para lectura */
+  --line-height-large: 1.6;
+  --line-height-headers-large: 1.4;
+  
+  /* Espaciado proporcional aumentado */
+  --espacio-xs-large: calc(var(--espacio-xs) * 1.2);
+  --espacio-s-large: calc(var(--espacio-s) * 1.2);
+  --espacio-m-large: calc(var(--espacio-m) * 1.2);
+  --espacio-l-large: calc(var(--espacio-l) * 1.2);
+  --espacio-xl-large: calc(var(--espacio-xl) * 1.2);
+}
+
+/* ========== TEXTO BASE GRANDE ========== */
+
+/* Texto base del cuerpo aumentado */
+body {
+  font-size: var(--texto-m-large) !important;
+  line-height: var(--line-height-large) !important;
+  max-width: 80ch !important; /* Líneas no muy largas para legibilidad */
+  margin: 0 auto !important;
+}
+
+/* ========== ENCABEZADOS GRANDES ========== */
+
+h1 {
+  font-size: var(--texto-3xl-large) !important;
+  line-height: var(--line-height-headers-large) !important;
+  margin-bottom: var(--espacio-l-large) !important;
+}
+
+h2 {
+  font-size: var(--texto-2xl-large) !important;
+  line-height: var(--line-height-headers-large) !important;
+  margin-bottom: var(--espacio-m-large) !important;
+}
+
+h3 {
+  font-size: var(--texto-xl-large) !important;
+  line-height: var(--line-height-headers-large) !important;
+  margin-bottom: var(--espacio-m-large) !important;
+}
+
+h4 {
+  font-size: var(--texto-l-large) !important;
+  line-height: var(--line-height-headers-large) !important;
+}
+
+h5, h6 {
+  font-size: var(--texto-m-large) !important;
+  line-height: var(--line-height-headers-large) !important;
+}
+
+/* ========== PÁRRAFOS Y TEXTO ========== */
+
+p {
+  font-size: var(--texto-m-large) !important;
+  line-height: var(--line-height-large) !important;
+  margin-bottom: var(--espacio-m-large) !important;
+}
+
+li {
+  font-size: var(--texto-m-large) !important;
+  line-height: var(--line-height-large) !important;
+  margin-bottom: var(--espacio-s-large) !important;
+}
+
+/* ========== ELEMENTOS INTERACTIVOS GRANDES ========== */
+
+/* Botones más grandes y cómodos */
+button,
+.boton {
+  font-size: var(--texto-l-large) !important;
+  padding: var(--espacio-m-large) var(--espacio-l-large) !important;
+  min-height: 48px !important; /* Accesibilidad táctil */
+}
+
+/* Formularios más grandes */
+input,
+select,
+textarea {
+  font-size: var(--texto-l-large) !important;
+  padding: var(--espacio-m-large) !important;
+  line-height: var(--line-height-large) !important;
+}
+
+/* Labels de formularios */
+label {
+  font-size: var(--texto-l-large) !important;
+  line-height: var(--line-height-large) !important;
+  margin-bottom: var(--espacio-s-large) !important;
+}
+
+/* ========== NAVEGACIÓN GRANDE ========== */
+
+/* Enlaces de navegación más grandes */
+nav a {
+  font-size: var(--texto-l-large) !important;
+  padding: var(--espacio-m-large) var(--espacio-l-large) !important;
+  line-height: var(--line-height-large) !important;
+}
+
+/* Breadcrumbs y navegación secundaria */
+.breadcrumb,
+.nav-secondary a {
+  font-size: var(--texto-s-large) !important;
+}
+
+/* ========== TABLAS GRANDES ========== */
+
+/* Celdas de tabla más espaciosas */
+th,
+td {
+  font-size: var(--texto-m-large) !important;
+  padding: var(--espacio-m-large) !important;
+  line-height: var(--line-height-large) !important;
+}
+
+th {
+  font-size: var(--texto-l-large) !important;
+}
+
+/* ========== CONTENEDORES Y ESPACIADO ========== */
+
+/* Artículos con más espaciado */
+article {
+  padding: var(--espacio-l-large) !important;
+  margin-bottom: var(--espacio-xl-large) !important;
+}
+
+/* Secciones con espaciado proporcional */
+section {
+  padding: var(--espacio-l-large) 0 !important;
+  margin-bottom: var(--espacio-l-large) !important;
+}
+
+/* Header y footer con más espaciado */
+header,
+footer {
+  padding: var(--espacio-l-large) !important;
+}
+
+/* ========== ELEMENTOS ESPECIALES ========== */
+
+/* Skip links más grandes */
+.skip-link {
+  font-size: var(--texto-l-large) !important;
+  padding: var(--espacio-m-large) var(--espacio-l-large) !important;
+}
+
+/* Citas y texto destacado */
+blockquote {
+  font-size: var(--texto-l-large) !important;
+  line-height: var(--line-height-large) !important;
+  padding: var(--espacio-l-large) !important;
+}
+
+/* Código y texto monoespaciado */
+code,
+pre {
+  font-size: var(--texto-s-large) !important;
+  line-height: var(--line-height-large) !important;
+}
+
+/* ========== RESPONSIVE PARA TEXTO GRANDE ========== */
+
+@media (max-width: 768px) {
+  /* En móvil, aumentar aún más para compensar pantalla pequeña */
+  body {
+    font-size: calc(var(--texto-m-large) * 1.1) !important;
+    max-width: 70ch !important;
+  }
+  
+  h1 {
+    font-size: calc(var(--texto-3xl-large) * 0.9) !important;
+  }
+  
+  h2 {
+    font-size: calc(var(--texto-2xl-large) * 0.9) !important;
+  }
+  
+  /* Botones un poco más grandes en móvil */
+  button,
+  .boton {
+    font-size: calc(var(--texto-l-large) * 1.1) !important;
+    min-height: 52px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* En pantallas grandes, permitir líneas un poco más largas */
+  body {
+    max-width: 90ch !important;
+  }
+}
+
+/* ========== MODO PRINT PARA TEXTO GRANDE ========== */
+
+@media print {
+  /* En impresión, mantener texto grande pero optimizado */
+  body {
+    font-size: 14pt !important;
+    line-height: 1.5 !important;
+    max-width: none !important;
+  }
+  
+  h1 { font-size: 24pt !important; }
+  h2 { font-size: 20pt !important; }
+  h3 { font-size: 16pt !important; }
+}
+
+} /* Cierra @media para texto grande */
