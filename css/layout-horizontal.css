@@ -45,7 +45,7 @@ nav ul {
 }
 
 nav a {
-  padding: var(--espacio-s) var(--espacio-m);
+  padding: var(--espacio-xs) var(--espacio-s);
 }
 
 /* Hamburguesa oculta en horizontal */

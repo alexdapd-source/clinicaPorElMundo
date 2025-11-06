@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClinicaPorElMundo - Accesibilidad</title>
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="alternate stylesheet" href="../css/theme-large-text.css" title="Texto Grande">
+    <link rel="alternate stylesheet" href="../css/theme-contrast.css" title="Alto Contraste">
+    <link rel="alternate stylesheet" href="../css/theme-large-contrast.css" title="Texto Grande + Alto Contraste">
 </head>
 <body>
     <a href="#general_main" class="skip-link">Saltar al contenido</a>
@@ -12,21 +15,22 @@
         <div class="logo">
             <a href="../index.html"><img src="../extra/logoClinica.jpg" alt="Logo de Clínica Por El Mundo" height="75" width="75"></a>
             <h1>ClinicaPorElMundo</h1>
-        </div>
-        <nav id="navegadorPrincipal">
+        </div>    
+        <nav class="navegadorPrincipal">
             <ul>
                 <li><a href="../nav2/Enfdeldia/Enfermedaddeldia.html">Enfermedad del día</a></li>
                 <li><a href="../nav2/enfermedadesusuales/enfermedadesusuales.html">Enfermedades más usuales</a></li>
                 <li><a href="../nav2/tablaEnfermedades.html">Glosario médico alfabético</a></li>
                 <li><a href="../nav2/formulario/formulario.html">Formulario URGENTE orina</a></li>
                 <li><a href="../nav2/tablaSeguros.html">Comparación precio seguros</a></li>
+                <li><a href="../nav2/accesibilidad.html"> ¿Accesibilidad?</a></li>
             </ul>
         </nav>  
     </header>
 
     <div class="ruta_de_migas">
         <a href="../index.html">Inicio</a> &gt; 
-        <span>Declaración de accesibilidad</span>
+        <span>Accesibilidad</span>
     </div>
 
     <main id="general_main">
@@ -41,6 +45,20 @@
             <li>Se han implementado mecanismos de navegación como rutas de migas de pan y un mapa del sitio.</li>
         </ul>
         <p>ClinicaPorElMundo se compromete a seguir mejorando la accesibilidad de este sitio conforme a las pautas WCAG 2.1 nivel AA.</p>
+        
+        <div id = "comparacion_documentos"></div>
+            <section id="accesibles">
+                <h2>Documentos ACCESIBLES</h2>
+                <a href="../extra/docaccbueno.docx" download>Descargar ejemplo .docx ACCESIBLE</a><br>
+                <a href="../extra/docaccbueno.pdf" download>Descargar ejemplo .pdf ACCESIBLE</a>
+            </section>
+
+            <section id="no_accesibles">
+                <h2>Documentos NO accesibles</h2>
+                <a href="../extra/doccnoacc.docx" download>Descargar ejemplo .docx NO accesible</a><br>
+                <a href="../extra/docnoacc.pdf" download>Descargar ejemplo .pdf NO accesible</a>
+            </section>
+    
     </main>
 
     <footer>
