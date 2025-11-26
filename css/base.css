@@ -68,14 +68,13 @@ a {
   font-weight: 500;
 }
 
-a:hover {     /*recuerda cambia el fondeado*/
-  color: var(--texto-principal);
-}
-
 a:visited { 
   color: var(--color-visitado);
 }
 
+a:hover {     /*recuerda cambia el fondeado*/
+  color: var(--color-acento);
+}
 /* IMPORTANTE: Marcamos en movimiento con teclado el cambio de color  */
 a:focus {
   outline: 3px solid var(--color-acento);
@@ -85,6 +84,14 @@ a:focus {
 
 /* ============ IMÁGENES ============ */
 img { 
+  max-width: 100%; /* Se adapta al contenedor */
+  width: auto; /* Mantiene proporción */
+  height: auto; /* Mantiene proporción */
+  display: block;
+  object-fit: contain; /* Mantiene la proporción sin recortar */
+}
+
+video { 
   max-width: 100%; /* Se adapta al contenedor */
   width: auto; /* Mantiene proporción */
   height: auto; /* Mantiene proporción */
@@ -180,3 +187,4 @@ button:focus,
   outline: 3px solid var(--color-acento);
   outline-offset: 2px;
 }
+

@@ -10,6 +10,7 @@
     <link rel="alternate stylesheet" href="../css/theme-large-contrast.css" title="Texto Grande + Alto Contraste">
 </head>
 <body>
+    <script type="text/javascript" src="https://amara.org/embedder-iframe"></script>
     <a href="#general_main" class="skip-link">Saltar al contenido</a>
     <header>
         <div class="logo">
@@ -46,7 +47,7 @@
         </ul>
         <p>ClinicaPorElMundo se compromete a seguir mejorando la accesibilidad de este sitio conforme a las pautas WCAG 2.1 nivel AA.</p>
         
-        <div id = "comparacion_documentos"></div>
+        <div id = "comparacion_documentos">
             <section id="accesibles">
                 <h2>Documentos ACCESIBLES</h2>
                 <a href="../extra/docaccbueno.docx" download>Descargar ejemplo .docx ACCESIBLE</a><br>
@@ -58,7 +59,41 @@
                 <a href="../extra/doccnoacc.docx" download>Descargar ejemplo .docx NO accesible</a><br>
                 <a href="../extra/docnoacc.pdf" download>Descargar ejemplo .pdf NO accesible</a>
             </section>
-    
+        </div>
+
+        <section id="blog-wordpress">
+            <h2>Blogs de ClinicaPorElMundo en WORDPRESS:</h2>
+            <iframe
+                src="https://clinicaporelmundo.wordpress.com/" 
+                title="Blog de la página en Wordpress"
+                height="600px"
+                width="50%"
+                style="border: none;" >
+            </iframe>
+            <a href="https://clinicaporelmundo.wordpress.com/2025/11/19/accesibilidad-en-personas-sordas/">WORDPRESS: Accesibilidad en personas sordas</a><br>
+            <a href="https://clinicaporelmundo.wordpress.com/2025/11/20/accesibilidad-para-personas-ciegas/">WORDPRESS: Accesibilidad para personas ciegas</a> <br>
+            <a href="https://clinicaporelmundo.wordpress.com/2025/11/19/torsion-testicular/">WORDPRESS: Torsión testiscular</a>
+        </section>
+
+        <div>
+            <article id="insertado-directo">
+                <h2>Video introductorio de la página web con subtítulos de Youtube</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fyWRRFAn6Bg?si=_Q5rzemGjMRxj5SA" title="Video introductorio de ClinicaPorElMundo - Mediblog" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </article>
+            <article id="insertado-sub-externo">
+                <h2>Video introductorio de la página web con subtítulos anclados</h2>
+                <video src="../extra/video-presentacion-web.mp4" controls aria-label="Video de presentación de ClinicaPorElMundo con subtítulos en español">
+                <track label="Español" kind="subtitles" srclang="es" src="../extra/captionsEsp.vtt" default>
+                <track label="Ingles" kind="subtitles" srclang="es" src="../extra/captionsEn.vtt" default>    
+            </video>
+            </article>
+            <article id="insertado-amara">
+                <h2>Video introductorio de la página web con subtítulos de Amara</h2>
+                <div class="amara-embed" data-url="http://www.youtube.com/watch?v=fyWRRFAn6Bg" data-team="null" aria-label="Reproductor de video con subtítulos de Amara"></div>
+            </article>
+        </div>
+
+
     </main>
 
     <footer>
