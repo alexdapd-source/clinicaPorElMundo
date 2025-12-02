@@ -20,11 +20,11 @@
         <nav class="navegadorPrincipal">
             <ul>
                 <li><a href="../nav2/Enfdeldia/Enfermedaddeldia.html">Enfermedad del día</a></li>
-                <li><a href="../nav2/enfermedadesusuales/enfermedadesusuales.html">Enfermedades más usuales</a></li>
+                <li><a href="../nav2/enfermedadesusuales/enfermedadesusuales.html">Enfermedades usuales</a></li>
                 <li><a href="../nav2/tablaEnfermedades.html">Glosario médico alfabético</a></li>
-                <li><a href="../nav2/formulario/formulario.html">Formulario URGENTE orina</a></li>
+                <li><a href="../nav2/formulario/formulario.html">Formulario orina</a></li>
                 <li><a href="../nav2/tablaSeguros.html">Comparación precio seguros</a></li>
-                <li><a href="../nav2/accesibilidad.html"> ¿Accesibilidad?</a></li>
+                <li><a href="../nav2/accesibilidad.html">Contenido accesible</a></li>
             </ul>
         </nav>  
     </header>
@@ -82,14 +82,18 @@
             </article>
             <article id="insertado-sub-externo">
                 <h2>Video introductorio de la página web con subtítulos anclados</h2>
-                <video src="../extra/video-presentacion-web.mp4" controls aria-label="Video de presentación de ClinicaPorElMundo con subtítulos en español">
-                <track label="Español" kind="subtitles" srclang="es" src="../extra/captionsEsp.vtt" default>
-                <track label="Ingles" kind="subtitles" srclang="es" src="../extra/captionsEn.vtt" default>    
-            </video>
+                <figure>
+                    <video src="../extra/video-presentacion-web.mp4" controls>
+                        <track label="Español" kind="subtitles" srclang="es" src="../extra/captionsEsp.vtt" default>
+                        <track label="Ingles" kind="subtitles" srclang="es" src="../extra/captionsEn.vtt" default>    
+                    </video>
+                    <figcaption>Video de presentación de ClinicaPorElMundo con subtítulos en español</figcaption>
+                </figure>
             </article>
             <article id="insertado-amara">
                 <h2>Video introductorio de la página web con subtítulos de Amara</h2>
-                <div class="amara-embed" data-url="http://www.youtube.com/watch?v=fyWRRFAn6Bg" data-team="null" aria-label="Reproductor de video con subtítulos de Amara"></div>
+                <p>Reproductor de video con subtítulos proporcionados por Amara:</p>
+                <div class="amara-embed" data-url="http://www.youtube.com/watch?v=fyWRRFAn6Bg" data-team="null"></div>
             </article>
         </div>
 
@@ -98,6 +102,7 @@
 
     <footer>
         <p>ClinicaPorElMundo - Autores: Alex Daniel Apolo Dávila, Francisco José Juan Tortosa</p>
+        <a href="../extra/declaracion-accesibilidad.html">Acesibilidad</a>
     </footer>
 </body>
 </html>

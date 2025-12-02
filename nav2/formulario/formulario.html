@@ -20,17 +20,17 @@
         <nav class="navegadorPrincipal">
       <ul>
         <li><a href="../Enfdeldia/Enfermedaddeldia.html">Enfermedad del día</a></li>
-        <li><a href="../enfermedadesusuales/enfermedadesusuales.html">Enfermedades más usuales</a></li>
+        <li><a href="../enfermedadesusuales/enfermedadesusuales.html">Enfermedades usuales</a></li>
         <li><a href="../tablaEnfermedades.html">Glosario médico alfabético</a></li>
-        <li><a href="../formulario/formulario.html">Formulario URGENTE orina</a></li>
-        <li><a href="../tablaSeguros.html">Comparación precio seguros</a></li>
-        <li><a href="../accesibilidad.html">¿Accesibilidad?</a></li>
+        <li><a href="../formulario/formulario.html">Formulario orina</a></li>
+        <li><a href="../tablaSeguros.html">Comparación seguros</a></li>
+        <li><a href="../accesibilidad.html">Contenido accesible</a></li>
       </ul>
     </nav>
     </header>
     <div class="ruta_de_migas">
         <a href="../../index.html">Inicio</a> > 
-        <span>Formulario URGENTE orina</span>
+        <span>Formulario orina</span>
     </div>
 
   <main id="general_main">
@@ -41,23 +41,23 @@
 
     <form action="respuesta-formulario.html" method="get">
       <label for="correo"><span aria-hidden="true">📧</span> Correo electrónico *:</label><br>
-      <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required><br><br>
+      <input type="email" id="correo" name="correo" required><br><br>
 
       <label for="fecha"><span aria-hidden="true">📅</span> Fecha de nacimiento *:</label><br>
       <input type="date" id="fecha" name="fecha" required><br><br>
 
       <label for="edad"><span aria-hidden="true">🎂</span> Edad (18-99) *:</label><br>
-      <input type="number" id="edad" name="edad" min="18" max="99" step="1" placeholder="Ej: 34" required><br><br>
+      <input type="number" id="edad" name="edad" min="18" max="99" step="1" required><br><br>
 
       <label for="colororina"><span aria-hidden="true">🎨</span> Color de la orina *:</label><br>
-      <input type="color" id="colororina" name="colororina">
+      <input type="color" id="colororina" name="colororina" required>
       <small>Selecciona el color más parecido al observado.</small><br><br>
 
       <label for="dolor"><span aria-hidden="true">🩺</span> Nivel de dolor (0 = ninguno, 10 = máximo):</label><br>
       <input type="range" id="dolor" name="dolor" min="0" max="10" step="1"><br><br>
 
       <label for="telefono"><span aria-hidden="true">📞</span> Teléfono de contacto (formato: 600123456) *:</label><br>
-      <input type="tel" id="telefono" name="telefono" pattern="[6-9][0-9]{8}" placeholder="600123456" required>
+      <input type="tel" id="telefono" name="telefono" pattern="[6-9][0-9]{8}" required>
       <small>Debe empezar por 6, 7, 8 o 9 y tener 9 dígitos.</small><br><br>
 
       <input type="submit" value="✅ Enviar">
@@ -66,6 +66,7 @@
 
   <footer>
   
+    <a href="../../extra/declaracion-accesibilidad.html">Acesibilidad</a>
     <p>© 2025 Clinicaporelmundo | Todos los derechos reservados.</p>
   </footer>
 </body>
