@@ -188,3 +188,117 @@ button:focus,
   outline-offset: 2px;
 }
 
+/* ============ ESTRUCTURA BASE ============ */
+main, footer {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--espacio-m);
+}
+
+/* ============ ESTILOS BASE NAVEGACIÓN ============ */
+nav {
+  margin: var(--espacio-m) 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0;
+}
+
+
+nav a {
+  display: block;
+  text-decoration: none;
+  border-radius: var(--borde-redondo);
+  font-weight: bold;
+  min-width: 44px;
+  min-height: 44px;
+  text-align: center;
+  background-color: var(--color-primario);
+  color: var(--texto-principal);
+}
+#index_main a {
+  min-width: 50px;
+  min-height: 50px;
+  text-align: justify;
+}
+
+nav a:hover {
+  background-color: var(--color-secundario);
+  transform: translateY(-2px);
+  box-shadow: var(--sombra);
+  color: var(--texto-principal);
+}
+
+nav a:focus {
+  outline: 3px solid var(--color-acento);
+  outline-offset: 2px;
+}
+
+/* ============ ESTILOS BASE ARTÍCULOS ============ */
+article {
+  padding: var(--espacio-m);
+  margin-bottom: var(--espacio-m);
+  border-radius: var(--borde-redondo);
+  box-shadow: var(--sombra);
+  background-color: var(--fondo-blanco);
+}
+
+article h3 {
+  margin-bottom: var(--espacio-s);
+}
+
+/* ============ ESTILOS BASE FOOTER ============ */
+footer {
+  padding: var(--espacio-l) 0;
+  text-align: center;
+  margin-top: var(--espacio-xl);
+  background-color: var(--color-primario);
+  color: var(--texto-principal);
+}
+
+footer p {
+  margin-bottom: var(--espacio-s);
+}
+
+footer a {
+  color: var(--texto-principal);
+}
+
+footer a:hover {
+  color: var(--texto-principal);
+}
+
+/* ============ ESTILOS BASE HEADER ============ */
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--fondo-gris);
+  padding-top: var(--espacio-m);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-s);
+}
+
+.logo h1 {
+  margin: 0;
+  text-align: center;
+}
+
+/* ============ ESTILOS BASE VIDEOS ============ */
+iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: var(--borde-redondo);
+}
+

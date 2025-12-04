@@ -44,14 +44,15 @@ input[type="search"],
 textarea,
 select {
   width: 100%;
-  padding: var(--espacio-s);
-  font-size: var(--texto-m);
+  padding: var(--espacio-m);
+  font-size: var(--texto-l); /* Texto más grande */
   color: var(--texto-principal);
   border: 2px solid var(--borde-color);
   border-radius: var(--borde-redondo);
   font-family: var(--fuente-principal);
   background-color: var(--fondo-blanco);
 }
+
 
 /* ============ INPUT COLOR (SELECTOR DE COLOR) ============ */
 input[type="color"] {
@@ -66,7 +67,7 @@ input[type="color"] {
 
 input[type="color"]:focus {
   outline: none;
-  border-color: var(--color-primario);
+  border-color: var(--color-acento);
   box-shadow: 0 0 0 3px rgba(181, 196, 229, 0.3);
 }
 
@@ -75,7 +76,7 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: var(--color-primario);
+  border-color: var(--color-acento);
   box-shadow: 0 0 0 3px rgba(181, 196, 229, 0.3); /* Sombra suave del color primario */
 }
 
@@ -83,20 +84,6 @@ select:focus {
 textarea {
   min-height: 100px;
   resize: vertical;
-}
-
-/* Placeholder más claro para diferenciarlo del texto real */
-input::placeholder,
-textarea::placeholder,input[type="date"],
-  input[type="time"],
-  input[type="datetime-local"]{
-  color: #9ca3af; /* Gris claro para el placeholder */
-}
-
-
-/* ============ SELECT MÚLTIPLE ============ */
-select[multiple] {
-  min-height: 120px; /* Permitimos ver varias opciones a la vez */
 }
 
 /* ============ FIELDSET Y LEGEND ============ */
@@ -117,11 +104,10 @@ legend {
 /* ============ RADIOS Y CHECKBOXES ============ */
 input[type="radio"],
 input[type="checkbox"] {
-  width: auto;
   margin-right: var(--espacio-s);
   cursor: pointer;
-  min-width: 20px;
-  min-height: 20px; /* Tamaño mínimo para facilitar el click en móviles */
+  min-width: 44px;
+  min-height: 44px; /* Tamaño mínimo para facilitar el click en móviles */
 }
 
 /* Labels de radio/checkbox en línea con el control */
@@ -170,3 +156,15 @@ input[type="submit"]:focus {
   outline: 3px solid var(--color-acento);
   outline-offset: 2px;
 }
+/* ============ OPCIONES DEL SELECT ============ */
+option {
+    font-weight: normal;
+    font-size: var(--texto-l); /* Texto más grande */
+    padding: var(--espacio-m) var(--espacio-m); /* Más espacio interno */
+    min-height: 44px; 
+}
+
+option:hover {
+    background-color: var(--fondo-gris);
+}
+

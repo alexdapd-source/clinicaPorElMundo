@@ -73,18 +73,25 @@ nav a {
 }
 
 /* Mapa del cuerpo a la izquierda */
+#mapa,
 #mapaCuerpoHumano,
-section:has(img[src*="cuerpo.jpg"]) {
+.mapa-cuerpo {
   grid-column: 1;
   grid-row: 2;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: var(--espacio-m);
+  text-align: center;
 }
 
-section:has(img[src*="cuerpo.jpg"]) img {
-  max-width: 100%;
+#mapa img,
+.mapa-cuerpo img {
+  max-width: 150%; 
+  width: auto;
   height: auto;
+  display: block;
+  margin: 0 auto;
   border-radius: var(--borde-redondo);
   box-shadow: var(--sombra);
 }
@@ -107,7 +114,7 @@ section:has(img[src*="cuerpo.jpg"]) img {
 }
 
 /* ============================================
-   LAYOUT TABLET HORIZONTAL (Intermedio)
+  LAYOUT TABLET HORIZONTAL (Intermedio)
    ============================================ */
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -125,8 +132,9 @@ section:has(img[src*="cuerpo.jpg"]) img {
     grid-template-columns: 1fr 1fr;
   }
   
+  #mapa,
   #mapaCuerpoHumano,
-  section:has(img[src*="cuerpo.jpg"]) {
+  .mapa-cuerpo {
     grid-column: 1 / -1;
     grid-row: auto;
   }
